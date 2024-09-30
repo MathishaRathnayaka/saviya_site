@@ -3,11 +3,11 @@ body{
     font-family: arial,s sans-serif;
 }
 .container {
-    padding: 10px;
-    max-width: 500px;
+    padding: 10px auto;
+    max-width: 500px auto;
     margin: 100px auto;
     background-color: #333;
-    color: #fff;
+    color: #12a081;
     border-radius: 10px;
 }
 
@@ -35,7 +35,7 @@ form select {
 
 form button {
     padding: 8px;
-    background-color: #3498db;
+    background-color: #12a081;
     border: none;
     border-radius: 10px;
     margin-top: 10px;
