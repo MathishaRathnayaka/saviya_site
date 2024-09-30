@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file": "e:\\LOkuuu\\lokuu\\listrace-v1.0\\index.html"
+            "file": "e:\\saviyasite\\saviyasite\\saviyasite\\index.html"
         }
     ]
 }
