@@ -1,6 +1,7 @@
 body{
     background-color: #222121;
     font-family: arial,s sans-serif;
+    
 }
 .container {
     padding: 10px auto;
@@ -8,7 +9,7 @@ body{
     margin: 100px auto;
     background-color: #333;
     color: #12a081;
-    border-radius: 10px;
+    border-radius: 10px ;
 }
 
 form {
@@ -42,3 +43,12 @@ form button {
     color: #fff;
     cursor: pointer;
 }
+#bgVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; 
+}
+
