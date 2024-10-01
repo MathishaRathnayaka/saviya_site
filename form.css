@@ -1,14 +1,15 @@
 body{
     background-color: #222121;
     font-family: arial,s sans-serif;
+    position: center;
     
 }
 .container {
     padding: 10px auto;
     max-width: 500px auto;
     margin: 100px auto;
-    background-color: #333;
-    color: #12a081;
+    /* background-color: #96d3cb; */
+    color: #1de6cb;
     border-radius: 10px ;
 }
 
