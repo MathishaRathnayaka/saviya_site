@@ -1,0 +1,206 @@
+body {
+    /* background-color: #222121; */
+    font-family: Arial, sans-serif;
+    position: center;
+}
+
+.container {
+    padding: 10px auto;
+    max-width: 500px auto;
+    margin: 100px auto;
+    background-color: #34776e7e;
+    color: #080614;
+    border-radius: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form label {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+form input {
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+form select {
+    padding: 8px;
+}
+
+form button {
+    padding: 8px;
+    background-color: #12a081;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#bgVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Navbar Styling */
+.navbar-header {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.navbar-collapse ul {
+    display: flex; /* Aligns the links horizontally */
+    justify-content: flex-start; /* Aligns the links to the left */
+    align-items: center; /* Centers the items vertically */
+    list-style: none; /* Removes the bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-collapse ul li {
+    margin-right: 20px; /* Adds spacing between the links */
+}
+
+.navbar-collapse ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    padding: 10px 15px;
+}
+
+.navbar-collapse ul li a:hover {
+    color: #007bff; /* Change color on hover */
+    background-color: rgba(0, 0, 0, 0.1); /* Optional: hover background */
+    border-radius: 5px; /* Optional: adds rounded corners */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center; /* Vertically center brand with nav items */
+    font-size: 1.5em;
+}
+
+.navbar-brand span {
+    margin-right: 5px;
+}
+
+.navbar-brand span:nth-child(1) {
+    color: red;
+}
+
+.navbar-brand span:nth-child(2) {
+    color: rgb(3, 151, 114);
+}
+
+.navbar-brand span:nth-child(3) {
+    color: orange;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+
+.gallery-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+/* Featured Work Section */
+.featured-work {
+    text-align: center;
+    padding: 50px 20px;
+    background-image: ;
+}
+
+.featured-work h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.featured-work p {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    font-size: 1.1em;
+    color: #666;
+}
+
+.work-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.work-item {
+    max-width: 200px;
+    text-align: center;
+}
+
+.work-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.work-item h3 {
+    font-size: 1.2em;
+    margin: 10px 0 5px 0;
+}
+
+/* Footer Section */
+footer {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.2em;
+}
