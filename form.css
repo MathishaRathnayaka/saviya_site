@@ -11,6 +11,7 @@ body{
     background-color: #34776e7e;
     color: #080614;
     border-radius: 10px ;
+    position: inline;
 }
 
 form {
