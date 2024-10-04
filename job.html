@@ -5,79 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ණය තොරතුරු</title>
     <link rel="stylesheet" href="ad.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
+    <!-- Navigation Section -->
+    <nav class="navbar">
+        <div class="container">
+            <!-- Logo -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">
+                    <span class="logo-part" style="color: red;">ස</span>
+                    <span class="logo-part" style="color: rgb(3, 151, 114);">වි</span>
+                    <span class="logo-part" style="color: orange;">ය</span>
+                </a>
+            </div>
+
+            <!-- Menu -->
+            <div class="navbar-menu" id="navbar-menu">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">About Us</a></li>
+                    <li><a href="index.html">Explore</a></li>
+                    <li><a href="index.html">Review</a></li>
+                    <li><a href="index.html">Blog</a></li>
+                    <li><a href="index.html">Contact</a></li>
+                    <li><a href="form.html">Form</a></li>
+                </ul>
+            </div>
+
+            <!-- Hamburger Menu (for mobile) -->
+            <button class="navbar-toggle" type="button">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <script>
+        document.querySelector('.navbar-toggle').addEventListener('click', function() {
+            document.getElementById('navbar-menu').classList.toggle('active');
+        });
+    </script>
+
+    <!-- Main Section -->
     <section class="top-area">
         <div class="header-area">
-            <!-- Start Navigation -->
-            <nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy"  data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
-
-                <div class="container">
-
-                    <!-- Start Header Navigation -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                            <i class="fa fa-bars"></i>
-                        </button>
-                        <!-- <a class="navbar-brand" href="index.html">saviyasite
-                            <span>saviyasite</span></a> -->
-                            <a class="navbar-brand" href="index.html" >
-                                <span style="color: red;" font-size: 50px >ස</span>
-                                <span style="color: rgb(3, 151, 114);"font-size: 50px>වි</span>
-                                <span style="color: orange;"font-size: 20px>ය</span>
-                            </a>
-                                
-                            
-
-                    </div>
-                    
-                    <!--/.navbar-header-->
-                    <!-- End Header Navigation -->
-
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <!-- <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
-                        <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-                            <li class=" scroll active"><a href="#home">home</a></li>
-                            <li class="scroll"><a href="#works">About US</a></li>
-                            <li class="scroll"><a href="#explore">explore</a></li>
-                            <li class="scroll"><a href="#reviews">review</a></li>
-                            <li class="scroll"><a href="#blog">blog</a></li>
-                            <li class="scroll"><a href="#contact">contact</a></li>
-                            <li class=""><a href=".\form.html">Form</a></li>
-                            
-                        </ul>/.nav -->
-                        <!-- <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-                            <li class=" scroll active"><a href="./index.html">home</a></li>
-                            <li class="scroll"><a href="./index.html">About US</a></li>
-                            <li class="scroll"><a href="./index.html">explore</a></li>
-                            <li class="scroll"><a href="./index.html">review</a></li>
-                            <li class="scroll"><a href="./index.html">blog</a></li>
-                            <li class="scroll"><a href="./index.html">contact</a></li>
-                            <li class=""><a href=".\form.html">Form</a></li>
-                            
-                        </ul> -->
-                    </div><!-- /.navbar-collapse -->
-                </div><!--/.container-->
-            </nav><!--/nav-->
-            <!-- End Navigation -->
-        </div><!--/.header-area-->
-        <div class="clearfix"></div>
-
-    </section><!-- /.top-area-->
-
-    <!-- Hero Section -->
-    <!-- <section class="hero">
-        <div class="hero-text">
-            <h1>Art, Reimagined.</h1>
-            <p>Mixed Media & Digital Artwork by Amber Williams</p>
-            <a href="#" class="gallery-btn">View Gallery</a>
         </div>
-    </section> -->
+        <div class="clearfix"></div>
+    </section>
 
     <!-- Featured Work Section -->
     <section class="featured-work">
-        
         <h2><b>Job opportunities for you...</b></h2>
         <h2><b>ඔබ සඳහා ඇති රැකියා අවස්ථා…</b></h2>
         <p>Providing career paths for low-income families! Our Job Opportunities section connects job seekers with businesses,
@@ -87,22 +66,15 @@
         <div class="work-gallery">
             <div class="work-item">
                 <img src="assets/images/adsec/job/J5.jpg" alt="Up-tempo">
-                <!-- <h3>Up-tempo</h3>
-                <p>by Amber Williams</p> -->
             </div>
             <div class="work-item">
                 <img src="assets/images/adsec/job/j5.jpg" alt="Sonata I">
-                <!-- <h3>Sonata I</h3>
-                <p>by Amber Williams</p> -->
             </div>
             <div class="work-item">
                 <img src="assets/images/adsec/job/j5.jpg" alt="Sonata II">
-                <!-- <h3>Sonata II</h3>
-                <p>by Amber Williams</p> -->
             </div>
         </div>
         <a href="https://ikman.lk/en/ads/sri-lanka/jobs" class="Bancking-btn" target="_blank">MORE JOBS</a>
-
     </section>
 
     <!-- Footer -->

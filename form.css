@@ -4,7 +4,7 @@ body{
     position: center;
     
 }
-.container {
+/* .container {
     padding: 10px auto;
     max-width: 500px auto;
     margin: 100px auto;
@@ -12,7 +12,9 @@ body{
     color: #080614;
     border-radius: 10px ;
     position: inline;
-}
+    
+} */
+
 
 form {
     display: flex;
@@ -53,4 +55,6 @@ form button {
     min-height: 100%;
     z-index: -1; 
 }
+
+
 
