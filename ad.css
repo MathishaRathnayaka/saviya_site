@@ -150,7 +150,7 @@ body {
     align-items: center;
 }
 
-/* Logo Styles */
+/* Logo Styles wenas kara ganna puluwan */
 .navbar-brand {
     font-size: 30px;
     font-weight: bold;
@@ -161,7 +161,7 @@ body {
     font-size: 35px;
 }
 
-/* Menu Styles */
+/* Menu Styles ara pallaha thiyana nav eke chnges wenas karana thena  */
 .navbar-menu {
     display: flex;
 }
