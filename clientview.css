@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+/* Main container to hold both the employee details and the side actions */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Employee details section */
+.employee-details-container {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+}
+
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.back-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.employee-details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.details-row {
+    margin-right: 40px;
+}
+
+h1 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 14px;
+    color: #666;
+}
+
+.status {
+    color: #fff;
+    background-color: #28a745;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.info-item h2 {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.info-item p {
+    font-size: 14px;
+    color: #666;
+}
+
+.fobs-section {
+    margin-top: 20px;
+}
+
+.add-fob-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.add-fob-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.project-access-section {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th,
+table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.new-project-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Side Actions section */
+.side-actions {
+    flex: 0 0 250px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #f7f7f6;
+}
+
+.side-actions ul {
+    list-style: none;
+}
+
+.side-actions ul li {
+    margin-bottom: 10px;
+}
+
+.side-actions ul li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.side-actions ul li a:hover {
+    text-decoration: underline;
+}
+
+/* General Styles */
+.navbar {
+    background-color: #2c3e50;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1000;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar-brand .logo-part {
+    font-size: 35px;
+}
+
+.navbar-menu {
+    display: flex;
+}
+
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+}
+
+.navbar-toggle {
+    display: none;
+}
+.bar-chart {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.bar div {
+    background-color: #010a3b;
+    height: 30px;
+    text-align: right;
+    padding: 5px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+.bar-label {
+    width: 20%;
+    text-align: left;
+}
+.bar-value {
+    width: 80%;
+}
+
+
+
+
+/* Responsive

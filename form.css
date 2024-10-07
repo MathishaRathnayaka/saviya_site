@@ -4,22 +4,21 @@ body{
     position: center;
     
 }
-/* .container {
-    padding: 10px auto;
+.container {
+    /* padding: 10px auto;
     max-width: 500px auto;
-    margin: 100px auto;
-    background-color: #34776e7e;
-    color: #080614;
-    border-radius: 10px ;
-    position: inline;
+    margin: 100px auto; */
+    color: #46d322;
     
-} */
+}
 
 
 form {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    max-width: 500px !important;
+    margin-left: 50px;
 }
 
 form label {
