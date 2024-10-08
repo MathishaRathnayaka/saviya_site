@@ -139,6 +139,14 @@ table td {
     border-radius: 5px;
     cursor: pointer;
 }
+.removebttn {
+    background-color: #f34317;
+    color: white;
+    padding: 10px 15px;         
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
 /* Side Actions section */
 .side-actions {
