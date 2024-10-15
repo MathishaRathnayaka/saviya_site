@@ -58,7 +58,7 @@
 				<li>
 					<div class="header-top-left">
 						<ul>
-							<li class="select-opt">
+							<!-- <li class="select-opt">
 								<select name="language" id="language">
 									<option value="default">EN</option>
 									<option value="Bangla">BN</option>
@@ -70,7 +70,7 @@
 									<option value="usd">USD</option>
 									<option value="euro">Euro</option>
 									<option value="bdt">BDT</option>
-								</select>
+								</select> -->
 							</li> 
 							 <li class="select-opt">
 								<a href="#"><span class="lnr lnr-magnifier"></span></a>
@@ -87,12 +87,12 @@
 							<li class="header-top-contact">
 								<a href="./sign.html"><b>sign in</b></a>
 							</li>
-							<li class="header-top-contact">
+							<!-- <li class="header-top-contact">
 								<a href="./table.html">register</a>
 							</li>
 							<li class="header-top-contact">
 								<a href="./allrequest.html">ALL REQUEST</a>
-							</li>
+							</li> -->
 						</ul>
 					</div>
 				</li>
@@ -172,34 +172,47 @@
 					</p>
 				</div>
 				
-				<div class="welcome-hero-serch-box">
-					<div class="welcome-hero-form">
-						<div class="single-welcome-hero-form">
-							<h3>Select your Path?</h3>
-							<form action="index.html">
-								<input type="text" placeholder="Ex: Industrial, Education, Agriculture" />
-							</form>
-							<div class="welcome-hero-form-icon">
-								<i class="flaticon-list-with-dots"></i>
-							</div>
-						</div>
-						<div class="single-welcome-hero-form">
-							<h3>location</h3>
-							<form action="index.html">
-								<input type="text" placeholder="Ex: Kurunegala, Alawwa, Wariyapola" />
-							</form>
-							<div class="welcome-hero-form-icon">
-								<i class="flaticon-gps-fixed-indicator"></i>
-							</div>
-						</div>
-					</div>
-					<div class="welcome-hero-serch">
-						<button class="welcome-hero-btn" onclick="window.location.href='#'">
-							 search  <i data-feather="search"></i> 
-						</button>
-					</div>
-				</div>
-			</div>
+				<!-- <div class="welcome-hero-serch-box"> -->
+    <!-- <div class="welcome-hero-form">
+        <div class="single-welcome-hero-form">
+            <h3>Select Your Path?</h3>
+            <form action="index.html">
+                <input type="text" placeholder="Ex: Industrial, Education, Agriculture" />
+            </form>
+            <div class="welcome-hero-form-icon">
+                <i class="flaticon-list-with-dots"></i>
+            </div>
+        </div> -->
+        <!-- <div class="single-welcome-hero-form">
+            <h3>Location</h3>
+            <form action="index.html">
+                <input list="villages" name="village" placeholder="Ex: Kurunegala, Alawwa, Wariyapola" />
+                <datalist id="villages">
+                    <option value="Abbowa">
+                    <option value="Alawwa North">
+                    <option value="Alawwa South">
+                    <option value="Boyawalana">
+                    <option value="Bujjomuwa">
+                    <option value="Damunupola">
+                    <option value="Dehelgamuwa">
+                    <option value="Galdeniya">
+                    <option value="Galgamuwa North">
+                    <option value="Henduwawa Colony"> -->
+                    <!-- Add more options from the Village List -->
+                <!-- </datalist>
+            </form>
+            <div class="welcome-hero-form-icon">
+                <i class="flaticon-gps-fixed-indicator"></i>
+            </div>
+        </div>
+    </div> -->
+    <!-- <div class="welcome-hero-search">
+        <button class="welcome-hero-btn" onclick="window.location.href='#'">
+            Search <i data-feather="search"></i>
+        </button>
+    </div> -->
+</div>
+
 
 		</section><!--/.welcome-hero-->
 		<!--welcome-hero end -->
@@ -208,58 +221,44 @@
 		<section id="list-topics" class="list-topics">
 			<div class="container">
 				<div class="list-topics-content">
-					<ul>
+					<ul class="horizontal-list">
 						<li>
 							<div class="single-list-topics-content">
-								<div class="single-list-topics-icon">
-									<i class="flaticon-restaurant"></i>
-								</div>
-								<!-- <h2><a href="#">Agriculture</a></h2> -->
+								<img src="assets/images/icon/i1.png" style="width: 100px; height: 80px;">
 								<h2><a href="./market.html">ගැනුම් සහ විකුණුම් </a></h2>
-								<p>Market Place</p>
+								<h2>Export Opportunities</h2>
 							</div>
 						</li>
 						<li>
 							<div class="single-list-topics-content">
-								<div class="single-list-topics-icon">
-									<i class="flaticon-travel"></i>
-								</div>
-								<!-- <h2><a href="#">destination</a></h2> -->
+								<img src="assets/images/icon/i2.png" style="width: 100px; height: 80px;">
 								<h2><a href="./export.html">අපනයන අවස්ථා</a></h2>
-								<p>Export Opportunities</p>
+								<h2>Loan Information</h2>
 							</div>
 						</li>
 						<li>
 							<div class="single-list-topics-content">
-								<div class="single-list-topics-icon">
-									<i class="flaticon-building"></i>
-								</div>
-								<!-- <h2><a href="#">hotels</a></h2> -->
+								<img src="assets/images/icon/i3.png" style="width: 100px; height: 80px;">
 								<h2><a href="./training.html">පුහුණු අවස්ථා</a></h2>
-								<p>Training Opportunities</p>
+								<h2>Training Opportunities</h2>
 							</div>
 						</li>
 						<li>
 							<div class="single-list-topics-content">
-								<div class="single-list-topics-icon">
-									<i class="flaticon-pills"></i>
-								</div>
-								<!-- <h2><a href="#">healthcaree</a></h2> -->
+								<img src="assets/images/icon/i4.png" style="width: 100px; height: 80px;">
 								<h2><a href="./job.html">රැකියා අවස්ථා</a></h2>
-								<p>Job Opportunities</p>
+								<h2>Job Opportunities</h2>
 							</div>
 						</li>
 						<li>
-							<div class="single-list-topics-content" >
-								<div class="single-list-topics-icon">
-									<i class="flaticon-transport"></i>
-								</div>
-								<!-- <h2><a href="#">AUTOMOBILE</a></h2> -->
+							<div class="single-list-topics-content">
+								<img src="assets/images/icon/i5.png" style="width: 100px; height: 80px;">
 								<h2><a href="./ad.html">ණය තොරතුරු</a></h2>
-								<p>Loan Information</p>
+								<h2>Loan Information</h2>
 							</div>
 						</li>
 					</ul>
+					
 				</div>
 			</div><!--/.container-->
 

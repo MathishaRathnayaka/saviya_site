@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Table</title>
     <link rel="stylesheet" href="table.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-     <!-- Navigation Section -->
-     <nav class="navbar">
+    <!-- Navigation Section -->
+    <nav class="navbar">
         <div class="container">
             <!-- Logo -->
             <div class="navbar-header">
@@ -39,105 +40,78 @@
         </div>
     </nav>
 
-<div class="table-container">
-    <table>
-        <thead>
-            <tr>
-                <th>Full Name</th>
-                <th>Status</th>
-                <th>Updated Date</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Praveen Mathisha Rathnayaka</td>
-                <td><span class="status active">ACTIVE</span></td>
-                <td>07-10-2024 12:58 am</td>
-                <td><button class="view-btn"><a href="./clientview.html">view</a></button></td>
-            </tr>
-            <tr>
-                <td>Ayesha Rathnayaka</td>
-                <td><span class="status active">ACTIVE</span></td>
-                <td>07-10-2024 12:58 am</td>
-                <td><button class="view-btn"><a href="./clientview.html">view</a></button></td>
-            </tr>
-            <tr>
-                <td>Tharindu Bamdara</td>
-                <td><span class="status active">ACTIVE</span></td>
-                <td>07-10-2024 12:58 am</td>
-                <td><button class="view-btn"><a href="./clientview.html">view</a></button></td>
-            </tr>
-            <tr>
-                <td>Tharindu Bamdara</td>
-                <td><span class="status active">ACTIVE</span></td>
-                <td>07-10-2024 12:58 am</td>
-                <td><button class="view-btn"><a href="./clientview.html">view</a></button></td>
-            </tr>
-            <tr>
-                <td>Tharindu Bamdara</td>
-                <td><span class="status active">ACTIVE</span></td>
-                <td>07-10-2024 12:58 am</td>
-                <td><button class="view-btn"><a href="./clientview.html">view</a></button></td>
-            </tr>
-            <tr>
-                <td>Tharindu Bamdara</td>
-                <td><span class="status active">ACTIVE</span></td>
-                <td>07-10-2024 12:58 am</td>
-                <td><button class="view-btn"><a href="./clientview.html">view</a></button></td>
-            </tr>
-            <tr>
-                <td>Tharindu Bamdara</td>
-                <td><span class="status active">ACTIVE</span></td>
-                <td>07-10-2024 12:58 am</td>
-                <td><button class="view-btn"><a href="./clientview.html">view</a></button></td>
-            </tr>
-            <tr>
-                <td>Tharindu Bamdara</td>
-                <td><span class="status active">ACTIVE</span></td>
-                <td>07-10-2024 12:58 am</td>
-                <td><button class="view-btn"><a href="./clientview.html">view</a></button></td>
-            </tr>
-            <tr>
-                <td>Tharindu Bamdara</td>
-                <td><span class="status active">ACTIVE</span></td>
-                <td>07-10-2024 12:58 am</td>
-                <td><button class="view-btn"><a href="./clientview.html">view</a></button></td>
-            </tr>
-            <tr>
-                <td>Tharindu Bamdara</td>
-                <td><span class="status active">ACTIVE</span></td>
-                <td>07-10-2024 12:58 am</td>
-                <td><button class="view-btn"><a href="./clientview.html">view</a></button></td>
-            </tr>
-            <tr>
-                <td>Tharindu Bamdara</td>
-                <td><span class="status active">ACTIVE</span></td>
-                <td>07-10-2024 12:58 am</td>
-                <td><button class="view-btn"><a href="./clientview.html">view</a></button></td>
-            </tr>
-            <tr>
-                <td>Tharindu Bamdara</td>
-                <td><span class="status active">ACTIVE</span></td>
-                <td>07-10-2024 12:58 am</td>
-                <td><button class="view-btn"><a href="./clientview.html">view</a></button></td>
-            </tr>
-            <tr>
-                <td>Tharindu Bamdara</td>
-                <td><span class="status active">ACTIVE</span></td>
-                <td>07-10-2024 12:58 am</td>
-                <td><button class="view-btn"><a href="./clientview.html">view</a></button></td>
-            </tr>
-            <tr>
-                <td>Tharindu Bamdara</td>
-                <td><span class="status active">ACTIVE</span></td>
-                <td>07-10-2024 12:58 am</td>
-                <td><button class="view-btn"><a href="./clientview.html">view</a></button></td>
-            </tr>
-            <!-- Repeat rows as needed -->
-        </tbody>
-    </table>
-</div>
+    <!-- Search and Add Button -->
+    <div class="controls">
+        <input type="text" id="search-bar" placeholder="Search by name">
+        <button class="add-btn"><a href="form.html">Add Person</a></button>
+    </div>
 
+    <div class="table-container">
+        <table id="employee-table">
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Status</th>
+                    <th>Updated Date</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Praveen Mathisha Rathnayaka</td>
+                    <td><span class="status active">ACTIVE</span></td>
+                    <td>07-10-2024 12:58 am</td>
+                    <td><button class="view-btn"><a href="./clientview.html">view</a></button></td>
+                </tr>
+                <tr>
+                    <td>Ayesha Rathnayaka</td>
+                    <td><span class="status active">ACTIVE</span></td>
+                    <td>07-10-2024 12:58 am</td>
+                    <td><button class="view-btn"><a href="./clientview.html">view</a></button></td>
+                </tr>
+                <tr>
+                    <td>Tharindu Bamdara</td>
+                    <td><span class="status active">ACTIVE</span></td>
+                    <td>07-10-2024 12:58 am</td>
+                    <td><button class="view-btn"><a href="./clientview.html">view</a></button></td>
+                </tr>
+                <tr>
+                    <td>Geeth Karunarathna</td>
+                    <td><span class="status active">ACTIVE</span></td>
+                    <td>07-10-2024 12:58 am</td>
+                    <td><button class="view-btn"><a href="./clientview.html">view</a></button></td>
+                </tr>
+                <tr>
+                    <td>Sewwandi Rathnayaka</td>
+                    <td><span class="status active">ACTIVE</span></td>
+                    <td>07-10-2024 12:58 am</td>
+                    <td><button class="view-btn"><a href="./clientview.html">view</a></button></td>
+                </tr>
+                <tr>
+                    <td>Vihangi Bandara</td>
+                    <td><span class="status active">ACTIVE</span></td>
+                    <td>07-10-2024 12:58 am</td>
+                    <td><button class="view-btn"><a href="./clientview.html">view</a></button></td>
+                </tr>
+                <tr>
+                    <td>Lakmai Bandara</td>
+                    <td><span class="status active">ACTIVE</span></td>
+                    <td>07-10-2024 12:58 am</td>
+                    <td><button class="view-btn"><a href="./clientview.html">view</a></button></td>
+                </tr>
+                <!-- Repeat rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Search functionality
+        $('#search-bar').on('keyup', function() {
+            var value = $(this).val().toLowerCase();
+            $('#employee-table tbody tr').filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    </script>
 </body>
 </html>

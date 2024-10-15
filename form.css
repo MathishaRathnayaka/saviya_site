@@ -8,7 +8,8 @@ body{
     /* padding: 10px auto;
     max-width: 500px auto;
     margin: 100px auto; */
-    color: #46d322;
+    color: #f3f7f2;
+    background-color: rgba(0, 0, 0, 0.158);
     
 }
 
@@ -54,6 +55,39 @@ form button {
     min-height: 100%;
     z-index: -1; 
 }
+#name {
+    color: #222121;
+}
+/* CSS changes */
+form label {
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: #eff7ef; /* Change this color code to modify the label color */
+}
+
+form input {
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: #000000; /* Change this to the desired input text color */
+}
+
+form select {
+    padding: 8px;
+    color: #000000; /* Change this to the desired select dropdown text color */
+}
+
+form button {
+    padding: 8px;
+    background-color: #12a081; /* Button background color */
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    color: #fff; /* Button text color */
+    cursor: pointer;
+}
+
 
 
 
