@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Village List and Location Codes</title>
+    <link rel="stylesheet" href="./village.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <!-- Logo -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">
+                    <span class="logo-part" style="color: red;">ස</span>
+                    <span class="logo-part" style="color: rgb(3, 151, 114);">වි</span>
+                    <span class="logo-part" style="color: orange;">ය</span>
+                </a>
+            </div>
+
+            <!-- Menu -->
+            <div class="navbar-menu" id="navbar-menu">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">About Us</a></li>
+                    <li><a href="index.html">Explore</a></li>
+                    <li><a href="index.html">Review</a></li>
+                    <li><a href="index.html">Blog</a></li>
+                    <li><a href="index.html">Contact</a></li>
+                    <li><a href="form.html">Form</a></li>
+                </ul>
+            </div>
+
+            <!-- Hamburger Menu (for mobile) -->
+            <button class="navbar-toggle" type="button">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+
+    <section class="tabs">
+        <button class="tab-button" onclick="showTab('locationCode')">Location Code</button>
+        <button class="tab-button" onclick="showTab('gnDivisionList')">GN Division List</button>
+        <button class="tab-button" onclick="showTab('villageList')">Village List</button>
+    </section>
+
+    <section id="locationCode" class="tab-content">
+        <h3>LIfe Location Code</h3>
+        <form>
+            <input type="text" placeholder="Search Village">
+            <button type="submit">Search</button>
+            <label for="province">Province</label>
+            <select id="province">
+                <option value="" disabled selected>Select a Province</option>
+                <option value="Central">Central</option>
+                <option value="Eastern">Eastern</option>
+                <option value="Northern">Northern</option>
+                <option value="North Central">North Central</option>
+                <option value="North Western">North Western</option>
+                <option value="Sabaragamuwa">Sabaragamuwa</option>
+                <option value="Southern">Southern</option>
+                <option value="Uva">Uva</option>
+                <option value="Western">Western</option>
+            </select>
+            
+
+            
+            <label for="district">District</label>
+            <select id="district">
+                <option value="" disabled selected>Select a District</option>
+                
+                <option value="Kandy">Kandy</option>
+                <option value="Matale">Matale</option>
+                <option value="Nuwara Eliya">Nuwara Eliya</option>
+            
+                <!-- Eastern Province -->
+                <option value="Ampara">Ampara</option>
+                <option value="Batticaloa">Batticaloa</option>
+                <option value="Trincomalee">Trincomalee</option>
+            
+                <!-- Northern Province -->
+                <option value="Jaffna">Jaffna</option>
+                <option value="Kilinochchi">Kilinochchi</option>
+                <option value="Mannar">Mannar</option>
+                <option value="Mullaitivu">Mullaitivu</option>
+                <option value="Vavuniya">Vavuniya</option>
+            
+                <!-- North Central Province -->
+                <option value="Anuradhapura">Anuradhapura</option>
+                <option value="Polonnaruwa">Polonnaruwa</option>
+            
+                <!-- North Western Province -->
+                <option value="Kurunegala">Kurunegala</option>
+                <option value="Puttalam">Puttalam</option>
+            
+                <!-- Sabaragamuwa Province -->
+                <option value="Kegalle">Kegalle</option>
+                <option value="Ratnapura">Ratnapura</option>
+            
+                <!-- Southern Province -->
+                <option value="Galle">Galle</option>
+                <option value="Matara">Matara</option>
+                <option value="Hambantota">Hambantota</option>
+            
+                <!-- Uva Province -->
+                <option value="Badulla">Badulla</option>
+                <option value="Moneragala">Moneragala</option>
+            
+                <!-- Western Province -->
+                <option value="Colombo">Colombo</option>
+                <option value="Gampaha">Gampaha</option>
+                <option value="Kalutara">Kalutara</option>
+            </select>
+            
+            
+
+
+            <label for="divSecretariat">Divisional Secretariat</label>
+                <select id="divSecretariat">
+                    <option value="" disabled selected>Select a Divisional Secretariat</option>
+                    
+                    <!-- Example for Central Province - Kandy District -->
+                    <option value="Akurana">Akurana</option>
+                    <option value="Doluwa">Doluwa</option>
+                    <option value="Gampola">Gampola</option>
+                    <option value="Harispattuwa">Harispattuwa</option>
+                    <option value="Kundasale">Kundasale</option>
+                    <!-- Add more based on the districts/provinces -->
+
+                </select>
+
+                <label for="gnDivision">Grama Niladhari Division</label>
+                <select id="gnDivision">
+                    <option value="" disabled selected>Select a Grama Niladhari Division</option>
+                    
+                    <!-- Example for Akurana Divisional Secretariat -->
+                    <option value="Alawathugoda">Alawathugoda</option>
+                    <option value="Kahalla">Kahalla</option>
+                    <option value="Kekuluwela">Kekuluwela</option>
+                    <!-- Add more based on the selected Divisional Secretariat -->
+
+                </select>
+
+                <label for="village">Village</label>
+                <select id="village">
+                    <option value="" disabled selected>Select a Village</option>
+                    
+                    <!-- Example for Alawathugoda Grama Niladhari Division -->
+                    <option value="Ambagahagedara">Ambagahagedara</option>
+                    <option value="Bambaragahawatta">Bambaragahawatta</option>
+                    <option value="Thalgahawatta">Thalgahawatta</option>
+                    <!-- Add more based on the selected GN Division -->
+
+                </select>
+
+        </form>
+    </section>
+
+    <section id="gnDivisionList" class="tab-content">
+        <h3>Grama Niladhari Division List</h3>
+        <form>
+            <input type="text" placeholder="Search Village">
+            <button type="submit">Search</button>
+            <label for="province">Province</label>
+            <select id="province">
+                <option value="" disabled selected>Select a Province</option>
+                <option value="Central">Central</option>
+                <option value="Eastern">Eastern</option>
+                <option value="Northern">Northern</option>
+                <option value="North Central">North Central</option>
+                <option value="North Western">North Western</option>
+                <option value="Sabaragamuwa">Sabaragamuwa</option>
+                <option value="Southern">Southern</option>
+                <option value="Uva">Uva</option>
+                <option value="Western">Western</option>
+            </select>
+
+            <label for="district">District</label>
+            <select id="district">
+                <option value="Kandy">Kandy</option>
+                <option value="Matale">Matale</option>
+                <option value="Nuwara Eliya">Nuwara Eliya</option>
+            
+                <!-- Eastern Province -->
+                <option value="Ampara">Ampara</option>
+                <option value="Batticaloa">Batticaloa</option>
+                <option value="Trincomalee">Trincomalee</option>
+            
+                <!-- Northern Province -->
+                <option value="Jaffna">Jaffna</option>
+                <option value="Kilinochchi">Kilinochchi</option>
+                <option value="Mannar">Mannar</option>
+                <option value="Mullaitivu">Mullaitivu</option>
+                <option value="Vavuniya">Vavuniya</option>
+            
+                <!-- North Central Province -->
+                <option value="Anuradhapura">Anuradhapura</option>
+                <option value="Polonnaruwa">Polonnaruwa</option>
+            
+                <!-- North Western Province -->
+                <option value="Kurunegala">Kurunegala</option>
+                <option value="Puttalam">Puttalam</option>
+            
+                <!-- Sabaragamuwa Province -->
+                <option value="Kegalle">Kegalle</option>
+                <option value="Ratnapura">Ratnapura</option>
+            
+                <!-- Southern Province -->
+                <option value="Galle">Galle</option>
+                <option value="Matara">Matara</option>
+                <option value="Hambantota">Hambantota</option>
+            
+                <!-- Uva Province -->
+                <option value="Badulla">Badulla</option>
+                <option value="Moneragala">Moneragala</option>
+            
+                <!-- Western Province -->
+                <option value="Colombo">Colombo</option>
+                <option value="Gampaha">Gampaha</option>
+                <option value="Kalutara">Kalutara</option>
+           
+            
+            </select>
+        </form>
+    </section>
+
+    <section id="villageList" class="tab-content">
+        <h3>Village List</h3>
+        <form>
+            <input type="text" placeholder="Search Village">
+            <button type="submit">Search</button>
+            <label for="province">Province</label>
+            <select id="province">
+                <option>Select a Province</option>
+            </select>
+
+            <label for="district">District</label>
+            <select id="district">
+                <option value="Kandy">Kandy</option>
+                <option value="Matale">Matale</option>
+                <option value="Nuwara Eliya">Nuwara Eliya</option>
+            
+                <!-- Eastern Province -->
+                <option value="Ampara">Ampara</option>
+                <option value="Batticaloa">Batticaloa</option>
+                <option value="Trincomalee">Trincomalee</option>
+            
+                <!-- Northern Province -->
+                <option value="Jaffna">Jaffna</option>
+                <option value="Kilinochchi">Kilinochchi</option>
+                <option value="Mannar">Mannar</option>
+                <option value="Mullaitivu">Mullaitivu</option>
+                <option value="Vavuniya">Vavuniya</option>
+            
+                <!-- North Central Province -->
+                <option value="Anuradhapura">Anuradhapura</option>
+                <option value="Polonnaruwa">Polonnaruwa</option>
+            
+                <!-- North Western Province -->
+                <option value="Kurunegala">Kurunegala</option>
+                <option value="Puttalam">Puttalam</option>
+            
+                <!-- Sabaragamuwa Province -->
+                <option value="Kegalle">Kegalle</option>
+                <option value="Ratnapura">Ratnapura</option>
+            
+                <!-- Southern Province -->
+                <option value="Galle">Galle</option>
+                <option value="Matara">Matara</option>
+                <option value="Hambantota">Hambantota</option>
+            
+                <!-- Uva Province -->
+                <option value="Badulla">Badulla</option>
+                <option value="Moneragala">Moneragala</option>
+            
+                <!-- Western Province -->
+                <option value="Colombo">Colombo</option>
+                <option value="Gampaha">Gampaha</option>
+                <option value="Kalutara">Kalutara</option>
+            </select>
+            
+            </select>
+
+            <label for="divSecretariat">Divisional Secretariat</label>
+            <select id="divSecretariat">
+                <option>Select a Divisional Secretariat</option>
+            </select>
+        </form>
+    </section>
+
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(function (tab) {
+                tab.style.display = 'none';
+            });
+            document.getElementById(tabId).style.display = 'block';
+        }
+
+        // Show the first tab by default
+        showTab('locationCode');
+    </script>
+</body>
+</html>

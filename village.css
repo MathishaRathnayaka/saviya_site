@@ -1,0 +1,531 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+header h2 {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    background-color: #d1dace;
+    padding: 10px;
+}
+
+.tab-button {
+    background-color: #1b0947;
+    border: 1px solid #111313;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.tab-button:hover {
+    background-color: #2637ca;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px auto;
+    width: 80%;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    margin-top: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+/* .container {
+    padding: 10px auto;
+    max-width: 500px auto;
+    margin: 100px auto;
+    background-color: #0f332e7e;
+    color: #080614;
+    border-radius: 10px;
+    position: inline;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+    background-color: #2c3e50;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1000;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo Styles */
+.navbar-brand {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar-brand .logo-part {
+    font-size: 35px;
+}
+
+/* Menu Styles */
+.navbar-menu {
+    display: flex;
+}
+
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 10px 15px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    background-color: #e67e22;
+    border-radius: 5px;
+    color: white;
+}
+
+/* Hamburger Icon */
+.navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar-toggle:focus {
+    outline: none;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #2c3e50;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+}
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+    background-color: #2c3e50;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1000;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo Styles wenas kara ganna puluwan */
+.navbar-brand {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar-brand .logo-part {
+    font-size: 35px;
+}
+
+/* Menu Styles ara pallaha thiyana nav eke chnges wenas karana thena  */
+.navbar-menu {
+    display: flex;
+}
+
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 10px 15px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    background-color: #e67e22;
+    border-radius: 5px;
+    color: white;
+}
+
+/* Hamburger Icon */
+.navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar-toggle:focus {
+    outline: none;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #2c3e50;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form label {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+form input {
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+form select {
+    padding: 8px;
+}
+
+form button {
+    padding: 8px;
+    background-color: #12a081;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Video Background */
+#bgVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+/* Navbar Styles */
+/* .navbar {
+    background-color: #2c3e50;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1000;
+} */
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar-brand .logo-part {
+    font-size: 35px;
+}
+
+.navbar-menu {
+    display: flex;
+}
+
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 10px 15px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    background-color: #e67e22;
+    border-radius: 5px;
+    color: white;
+}
+
+/* Hamburger Icon */
+.navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar-toggle:focus {
+    outline: none;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #2c3e50;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+}
+
+/* Featured Work Section */
+.featured-work {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.featured-work h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.featured-work p {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    font-size: 1.1em;
+    color: #666;
+}
+
+.work-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.work-item {
+    max-width: 200px;
+    text-align: center;
+}
+
+.work-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #010408;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+/* Training Programs Section */
+.training-programs {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.training-programs h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 1em;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+table th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #ddd;
+}
+
