@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ණය තොරතුරු</title>
+    <link rel="stylesheet" href="ad.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation Section -->
+    <nav class="navbar">
+        <div class="container">
+            <!-- Logo -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">
+                    <span class="logo-part" style="color: red;">ස</span>
+                    <span class="logo-part" style="color: rgb(3, 151, 114);">වි</span>
+                    <span class="logo-part" style="color: orange;">ය</span>
+                </a>
+            </div>
+
+            <!-- Menu -->
+            <div class="navbar-menu" id="navbar-menu">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">About Us</a></li>
+                    <li><a href="index.html">Explore</a></li>
+                    <li><a href="index.html">Review</a></li>
+                    <li><a href="index.html">Blog</a></li>
+                    <li><a href="index.html">Contact</a></li>
+                    <li><a href="form.html">Form</a></li>
+                </ul>
+            </div>
+
+            <!-- Hamburger Menu (for mobile) -->
+            <button class="navbar-toggle" type="button">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <script>
+        document.querySelector('.navbar-toggle').addEventListener('click', function () {
+            document.getElementById('navbar-menu').classList.toggle('active');
+        });
+    </script>
+
+    <!-- Main Section -->
+    <section class="top-area">
+        <div class="header-area"></div>
+        <div class="clearfix"></div>
+    </section>
+
+    <!-- Featured Work Section -->
+    <section class="featured-work">
+        <h2><b>The Loan Information section</b></h2>
+        <h2><b>ණය තොරතුරු අංශය</b></h2>
+        <p>Access financial support for a brighter future! The Loan Information section guides low-income families and
+            small businesses on securing loans, providing essential details to start or grow their ventures.<br>දීප්තිමත් අනාගතයක් සඳහා මුල්‍ය ආධාර ලබාගන්න! ණය තොරතුරු අංශය අඩු ආදායම්ලාභී පවුල්වලට සහ කුඩා ව්‍යාපාරවලට ණය ලබා ගැනීමට මඟ පෙන්වයි, ඔවුන්ගේ ව්‍යාපාර ආරම්භ කිරීමට හෝ වර්ධනය කිරීමට අත්‍යවශ්‍ය තොරතුරු සපයයි.</p>
+        <div class="work-gallery">
+            <div class="work-item">
+                <a href="https://www.peoplesbank.lk/loan-calculator/" target="_blank">
+                    <img src="assets/images/adsec/loan/l1.jpg" alt="Loan 1">
+                </a>
+            </div>
+            <div class="work-item">
+                <a href="https://www.boc.lk/personal-banking/loans/personal-loan/boc-personal-loan" target="_blank">
+                    <img src="assets/images/adsec/loan/l2.jpg" alt="Loan 2">
+                </a>
+            </div>
+            <div class="work-item">
+                <a href="https://samurdhi.gov.lk/web/images/cercular/bank_division/format.pdf" target="_blank">
+                    <img src="assets/images/adsec/loan/l3.jpg" alt="Loan 3">
+                </a>
+            </div>
+        </div>
+
+        <!-- Loan Information Table -->
+        <table border="1" cellspacing="0" cellpadding="10">
+            <thead>
+                <tr>
+                    <th>Loan Type</th>
+                    <th>Interest Rate (%)</th>
+                    <th>Loan Amount (LKR)</th>
+                    <th>Provider Name</th>
+                    <th>Contact</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Agricultural Loan</td>
+                    <td>3.5</td>
+                    <td>50,000 - 500,000</td>
+                    <td>People's Bank</td>
+                    <td>+94 11 1234567</td>
+                    <td>Low-interest loans for farmers to boost production.</td>
+                </tr>
+                <!-- Additional rows -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Form Section to Add New Loan -->
+    <section class="loan-form">
+        <form action="#" method="POST">
+            <h2>Add your Loan Details..</h2>
+            
+            <!-- Loan Type Field -->
+            <div class="form-group">
+                <label for="loan-type">Loan Type</label>
+                <select id="loan-type" name="loan-type" required>
+                    <option value="agricultural-loan">Agricultural Loan</option>
+                    <option value="microfinance-loan">Microfinance Loan</option>
+                    <option value="housing-loan">Housing Loan</option>
+                    <option value="education-loan">Education Loan</option>
+                    <option value="startup-business-loan">Startup Business Loan</option>
+                    <option value="vehicle-loan">Vehicle Loan</option>
+                    <option value="fisheries-loan">Fisheries Loan</option>
+                    <option value="emergency-loan">Emergency Loan</option>
+                    <option value="women-entrepreneurs-loan">Women Entrepreneurs Loan</option>
+                    <option value="solar-energy-loan">Solar Energy Loan</option>
+                </select>
+            </div>
+    
+            <!-- Interest Rate Field -->
+            <div class="form-group">
+                <label for="interest-rate">Interest Rate (%)</label>
+                <input type="number" id="interest-rate" name="interest-rate" step="0.1" min="0" required>
+            </div>
+    
+            <!-- Loan Amount Field -->
+            <div class="form-group">
+                <label for="loan-amount">Loan Amount (LKR)</label>
+                <input type="number" id="loan-amount" name="loan-amount" min="0" required>
+            </div>
+    
+            <!-- Provider Name Field -->
+            <div class="form-group">
+                <label for="provider-name">Provider Name</label>
+                <input type="text" id="provider-name" name="provider-name" required>
+            </div>
+    
+            <!-- Contact Field -->
+            <div class="form-group">
+                <label for="contact">Contact</label>
+                <input type="tel" id="contact" name="contact" required>
+            </div>
+    
+            <!-- Details Field -->
+            <div class="form-group">
+                <label for="details">Details</label>
+                <textarea id="details" name="details" rows="4" required></textarea>
+            </div>
+    
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Add Loan</button>
+        </form>
+    </section>
+    
+    
+
+    <!-- Footer -->
+    <footer>
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">
+                <span class="logo-part" style="color: red;">ස</span>
+                <span class="logo-part" style="color: rgb(3, 151, 114);">වි</span>
+                <span class="logo-part" style="color: orange;">ය</span>
+            </a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

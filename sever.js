@@ -1,18 +1,3 @@
-// const express = require ('express')
-// const mongoose = require ('mongoose')
-// const path = require ('path')
-// const port = 3019
-
-// constapp =express();
-
-// appendFile.get('/',(req,res)=>{
-//     res.send("hello world")
-// })
-
-// appendFile.listen(port,()=>{
-//     console.log("Sever started")
-// })
-
 const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
@@ -26,7 +11,9 @@ const port = 3019;
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://mathisha1234:ByUa4uPb8fB2rnrs@mathisha.fvgwjpi.mongodb.net/', {
+const dbURI = 'mongodb+srv://mathisha1234:ByUa4uPb8fB2rnrs@mathisha.fvgwjpi.mongodb.net/form?retryWrites=true&w=majority';
+
+mongoose.connect(dbURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
@@ -52,20 +39,27 @@ const FormSchema = new mongoose.Schema({
 const FormData = mongoose.model('FormData', FormSchema);
 
 // Serve static files (HTML, CSS, etc.)
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname)));
 
 // Route to render the form
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'form.html'));
+    res.sendFile(path.join(__dirname, 'form.html'));
+});
+
+// Serve the index.html
+app.get('/index', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Handle form submission
 app.post('/submit', (req, res) => {
+    console.log(req.body); // Log the form data to check if it's being received properly
+
     const formData = new FormData(req.body);
-    
+
     // Save the data to MongoDB
     formData.save()
-        .then(() => res.send('Form submitted successfully!'))
+        .then(() => res.redirect('/index')) // Redirect to the index.html page after submission
         .catch(err => res.status(400).send('Error saving data: ' + err.message));
 });
 

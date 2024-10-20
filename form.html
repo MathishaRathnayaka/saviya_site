@@ -3,198 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Form Submission</title>
     <link rel="stylesheet" href="form.css">
-    <!-- meta data -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-    <!--font-family-->
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-   
-    <!-- title of site -->
-    <title>Directory Landing Page</title>
-
-    <!-- For logo jpg -->
     <link rel="shortcut icon" type="image/icon" href="assets/logo/logo2.jpg"/>
-   
-    <!--font-awesome.min.css-->
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-
-    <!--linear icon css-->
     <link rel="stylesheet" href="assets/css/linearicons.css">
-
-    <!--animate.css-->
     <link rel="stylesheet" href="assets/css/animate.css">
-
-    <!--flaticon.css-->
     <link rel="stylesheet" href="assets/css/flaticon.css">
-
-    <!--slick.css-->
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/slick-theme.css">
-    
-    <!--bootstrap.min.css-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    
-    <!-- bootsnav -->
-    <link rel="stylesheet" href="assets/css/bootsnav.css" >	
-    
-    <!--style.css-->
+    <link rel="stylesheet" href="assets/css/bootsnav.css">	
     <link rel="stylesheet" href="assets/css/style.css">
-    
-    <!--responsive.css-->
     <link rel="stylesheet" href="assets/css/responsive.css">
-
-
 </head>
-<body >
+<body>
     <video autoplay muted loop id="bgVideo">
-        <source src=".\assets\images\fourm\v1.mp4" type="video/mp4">
-        
+        <source src="./assets/images/fourm/v1.mp4" type="video/mp4">
     </video>
-        <section class="top-area">
-            <div class="header-area">
-                <!-- Start Navigation -->
-                <nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy"  data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
-
-                    <div class="container">
-
-                        <!-- Start Header Navigation -->
+    
+    <section class="top-area">
+        <div class="header-area">
+            <nav class="navbar navbar-default bootsnav navbar-sticky navbar-scrollspy" data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                            <i class="fa fa-bars"></i>
+                        </button>
                         <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                                <i class="fa fa-bars"></i>
-                            </button>
-                            <!-- <a class="navbar-brand" href="index.html">saviyasite
-                                <span>saviyasite</span></a> -->
-                                <!-- <a class="navbar-brand" href="index.html" >
-                                    <span style="color: red;" font-size: 50px >ස</span>
-                                    <span style="color: rgb(3, 151, 114);"font-size: 50px>වි</span>
-                                    <span style="color: orange;"font-size: 20px>ය</span>
-                                </a> -->
-                                <div class="navbar-header">
-                                    <a class="navbar-brand" href="index.html">
-                                        <span class="logo-part" style="color: red;">ස</span>
-                                        <span class="logo-part" style="color: rgb(3, 151, 114);">වි</span>
-                                        <span class="logo-part" style="color: orange;">ය</span>
-                                    </a>
-                                </div>
-                                    
-                                
-
-                        </div><!--/.navbar-header-->
-                       
-                            <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-                                <li class=" scroll active"><a href=".\index.html">home</a></li>
-                                <li class=""><a href=".\index.html">About US</a></li>
-                                <li class=""><a href=".\index.html">explore</a></li>
-                                <li class=""><a href=".\index.html">review</a></li>
-                                <li class=""><a href=".\index.html">blog</a></li>
-                                <li class=""><a href=".\index.html">contact</a></li>
-                                <li class=""><a href=".\form.html">Form</a></li>
-                                
-                            </ul>
-                        </div><!-- /.navbar-collapse -->
-                    </div><!--/.container-->
-                </nav><!--/nav-->
-                <!-- End Navigation -->
-            </div><!--/.header-area-->
-            <div class="clearfix"></div>
-
-            </section><!-- /.top-area-->
-            <div class="container">
-            <!-- <div class="startfourm"> -->
-            <form action="" method="post">
-                <label for="regd_no">NIC Number :</label>
-                <input type="text" id="regd_no" name="regd_no">
-        
-                <label for="name">Name :</label>
-                <input type="text" id="name" name="name">
-        
-                <label for="email">Email :</label>
-                <input type="email" name="email">
-        
-                <!-- <label for="branch">Branch :</label> -->
-                <!-- <select name="branch" id="branch">
-                    <option value="CSE">CSE</option>
-                    <option value="ECE">ECE</option>
-                    <option value="EEE">EEE</option>
-                    <option value="MECH">MECH</option>
-                    <option value="CIVIL">CIVIL</option>
-                    <label for="regd_no">Registration Number :</label>
-                    <input type="text" id="regd_no" name="regd_no"> -->
-                
-                    <label for="name">Name :</label>
-                    <input type="text" id="name" name="name">
-                
-                    <label for="email">Email :</label>
-                    <input type="email" id="email" name="email">
-                
-                    <label for="branch">Branch :</label>
-                    <select name="branch" id="branch">
-                        <option value="CSE">Kurunegala</option>
-                        <option value="ECE">Alawwa</option>
-                        <option value="EEE">Wariyapola</option>
-                        <option value="MECH">Abepussa</option>
-                        <option value="CIVIL">Warakapola</option>
-                    </select>
-                
-                    <label for="school">School :</label>
-                    <input type="text" id="school" name="school">
-                
-                    <label for="industry">Wish in Industry :</label>
-                    <input type="text" id="industry" name="industry">
-                
-                    <label for="mobile">Mobile Number :</label>
-                    <input type="tel" id="mobile" name="mobile">
-                
-                    <label for="province">Province :</label>
-                    <input type="text" id="province" name="province">
-                
-                    <label for="district">District :</label>
-                    <input type="text" id="district" name="district">
-                
-                    <label for="city">City :</label>
-                    <input type="text" id="city" name="city">
-                
-                    <label for="gender">Gender :</label>
-                    <select name="gender" id="gender">
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                        <option value="other">Other</option>
-                </select>
-        
-                <button type="submit">Submit</button>
-            </form>
+                            <a class="navbar-brand" href="index.html">
+                                <span class="logo-part" style="color: red;">ස</span>
+                                <span class="logo-part" style="color: rgb(3, 151, 114);">වි</span>
+                                <span class="logo-part" style="color: orange;">ය</span>
+                            </a>
+                        </div>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li class="scroll active"><a href="./index.html">Home</a></li>
+                        <li><a href="./index.html">About US</a></li>
+                        <li><a href="./index.html">Explore</a></li>
+                        <li><a href="./index.html">Review</a></li>
+                        <li><a href="./index.html">Blog</a></li>
+                        <li><a href="./index.html">Contact</a></li>
+                        <li><a href="./form.html">Form</a></li>
+                    </ul>
+                </div>
+            </nav>
         </div>
+    </section>
 
-        <!-- <div class="container"></div> -->
-            <!-- <form action="" method="post">
-                <label for="regd_no">Registration Number :</label>
-                <input type="text" id="regd_no" name="regd_no">
-        
-                <label for="name">Name :</label>
-                <input type="text" id="name" name="name">
-        
-                <label for="email">Email :</label>
-                <input type="email" name="email">
-        
-                <label for="branch">Branch :</label>
-                <select name="branch" id="branch">
-                    <option value="CSE">CSE</option>
-                    <option value="ECE">ECE</option>
-                    <option value="EEE">EEE</option>
-                    <option value="MECH">MECH</option>
-                    <option value="CIVIL">CIVIL</option>
-                </select>
-        
-                <button type="submit">Submit</button>
-            </form> -->
-        </div>
-    
-    
-    
+    <div class="container">
+        <form action="http://localhost:3019/submit" method="POST">
+            <label for="regd_no">NIC Number :</label>
+            <input type="text" id="regd_no" name="regd_no" required>
+
+            <label for="name">Name :</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+
+            <!-- <label for="branch">Branch :</label>
+            <select name="branch" id="branch" required>
+                <option value="Kurunegala">Kurunegala</option>
+                <option value="Alawwa">Alawwa</option>
+                <option value="Wariyapola">Wariyapola</option>
+                <option value="Abepussa">Abepussa</option>
+                <option value="Warakapola">Warakapola</option>
+            </select>
+
+            <label for="school">School :</label>
+            <input type="text" id="school" name="school" required>
+
+            <label for="industry">Wish in Industry :</label>
+            <input type="text" id="industry" name="industry" required>
+
+            <label for="mobile">Mobile Number :</label>
+            <input type="tel" id="mobile" name="mobile" required>
+
+            <label for="province">Province :</label>
+            <input type="text" id="province" name="province" required>
+
+            <label for="district">District :</label>
+            <input type="text" id="district" name="district" required>
+
+            <label for="city">City :</label>
+            <input type="text" id="city" name="city" required>
+
+            <label for="gender">Gender :</label>
+            <select name="gender" id="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select> -->
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 </body>
 </html>

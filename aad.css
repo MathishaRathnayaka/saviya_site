@@ -1,0 +1,90 @@
+/* Alternate Form Section */
+.alt-loan-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px;
+    background-color: #f0f0f0;
+}
+
+.alt-loan-form form {
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Alternate Form Title */
+.alt-loan-form h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #444;
+}
+
+/* Alternate Form Group Styling */
+.alt-form-group {
+    margin-bottom: 20px;
+}
+
+.alt-form-group label {
+    font-size: 18px;
+    margin-bottom: 8px;
+    display: block;
+    color: #333;
+}
+
+/* Alternate Input Fields */
+.alt-form-group input,
+.alt-form-group select,
+.alt-form-group textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Alternate Input Focus States */
+.alt-form-group input:focus,
+.alt-form-group select:focus,
+.alt-form-group textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+/* Alternate Button Styles */
+.alt-submit-btn {
+    width: 100%;
+    padding: 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.alt-submit-btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Alternate Input Validation Styling */
+.alt-form-group input:invalid {
+    border-color: red;
+}
+
+.alt-form-group input:valid {
+    border-color: green;
+}
