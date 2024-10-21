@@ -1,4 +1,143 @@
-/* Alternate Form Section */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #2c3e50;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1000;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo Styles */
+.navbar-brand {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar-brand .logo-part {
+    font-size: 35px;
+}
+
+/* Menu Styles */
+.navbar-menu {
+    display: flex;
+}
+
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 10px 15px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    background-color: #e67e22;
+    border-radius: 5px;
+    color: white;
+}
+
+/* Hamburger Icon */
+.navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar-toggle:focus {
+    outline: none;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #2c3e50;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+}
+
+/* Featured Work Section */
+.featured-work {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.featured-work h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.featured-work p {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    font-size: 1.1em;
+    color: #666;
+}
+
+.work-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.work-item {
+    max-width: 200px;
+    text-align: center;
+}
+
+.work-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Form Section */
 .alt-loan-form {
     display: flex;
     justify-content: center;
@@ -18,7 +157,6 @@
     max-width: 600px;
 }
 
-/* Alternate Form Title */
 .alt-loan-form h2 {
     text-align: center;
     font-size: 32px;
@@ -26,7 +164,6 @@
     color: #444;
 }
 
-/* Alternate Form Group Styling */
 .alt-form-group {
     margin-bottom: 20px;
 }
@@ -38,7 +175,6 @@
     color: #333;
 }
 
-/* Alternate Input Fields */
 .alt-form-group input,
 .alt-form-group select,
 .alt-form-group textarea {
@@ -51,7 +187,6 @@
     transition: border 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Alternate Input Focus States */
 .alt-form-group input:focus,
 .alt-form-group select:focus,
 .alt-form-group textarea:focus {
@@ -60,7 +195,6 @@
     outline: none;
 }
 
-/* Alternate Button Styles */
 .alt-submit-btn {
     width: 100%;
     padding: 18px;
@@ -80,11 +214,72 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Alternate Input Validation Styling */
 .alt-form-group input:invalid {
     border-color: red;
 }
 
 .alt-form-group input:valid {
     border-color: green;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 1em;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+table th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #ddd;
+}
+
+/* Video Background */
+#bgVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+/* Footer Section */
+footer {
+    background-color: #010408;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+/* Training Programs Section */
+.training-programs {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.training-programs h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
 }

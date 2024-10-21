@@ -26,13 +26,14 @@ const FormSchema = new mongoose.Schema({
     name: String,
     email: String,
     branch: String,
-    school: String,
-    industry: String,
-    mobile: String,
-    province: String,
-    district: String,
-    city: String,
-    gender: String
+    // You can uncomment and add other fields as needed
+    // school: String,
+    // industry: String,
+    // mobile: String,
+    // province: String,
+    // district: String,
+    // city: String,
+    // gender: String
 });
 
 // Define a model
@@ -46,7 +47,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'form.html'));
 });
 
-// Serve the index.html
+// Serve the index.html (homepage)
 app.get('/index', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
@@ -59,8 +60,27 @@ app.post('/submit', (req, res) => {
 
     // Save the data to MongoDB
     formData.save()
-        .then(() => res.redirect('/index')) // Redirect to the index.html page after submission
+        .then(() => {
+            console.log("Form data saved successfully");
+            // Send a page with a success popup message
+            res.send(`
+                <script>
+                    alert("Submitted successfully!");
+                    window.location.href = '/index';
+                </script>
+            `);
+        })
         .catch(err => res.status(400).send('Error saving data: ' + err.message));
+});
+
+// Fetch and display all submissions (for testing or admin view)
+app.get('/submissions', async (req, res) => {
+    try {
+        const submissions = await FormData.find(); // Get all the form submissions
+        res.json(submissions); // Respond with the submissions in JSON format
+    } catch (err) {
+        res.status(500).send('Error fetching submissions: ' + err.message);
+    }
 });
 
 // Start the server

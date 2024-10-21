@@ -20,6 +20,16 @@
     <link rel="stylesheet" href="assets/css/bootsnav.css">	
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <style>
+        /* Additional styles for the success message */
+        #success-message {
+            display: none;
+            color: green;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
     <video autoplay muted loop id="bgVideo">
@@ -57,7 +67,7 @@
     </section>
 
     <div class="container">
-        <form action="http://localhost:3019/submit" method="POST">
+        <form action="/submit" method="POST" id="submissionForm">
             <label for="regd_no">NIC Number :</label>
             <input type="text" id="regd_no" name="regd_no" required>
 
@@ -67,7 +77,7 @@
             <label for="email">Email :</label>
             <input type="email" id="email" name="email" required>
 
-            <!-- <label for="branch">Branch :</label>
+            <label for="branch">Branch :</label>
             <select name="branch" id="branch" required>
                 <option value="Kurunegala">Kurunegala</option>
                 <option value="Alawwa">Alawwa</option>
@@ -75,31 +85,6 @@
                 <option value="Abepussa">Abepussa</option>
                 <option value="Warakapola">Warakapola</option>
             </select>
-
-            <label for="school">School :</label>
-            <input type="text" id="school" name="school" required>
-
-            <label for="industry">Wish in Industry :</label>
-            <input type="text" id="industry" name="industry" required>
-
-            <label for="mobile">Mobile Number :</label>
-            <input type="tel" id="mobile" name="mobile" required>
-
-            <label for="province">Province :</label>
-            <input type="text" id="province" name="province" required>
-
-            <label for="district">District :</label>
-            <input type="text" id="district" name="district" required>
-
-            <label for="city">City :</label>
-            <input type="text" id="city" name="city" required>
-
-            <label for="gender">Gender :</label>
-            <select name="gender" id="gender" required>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
-            </select> -->
 
             <button type="submit">Submit</button>
         </form>
