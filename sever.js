@@ -26,7 +26,26 @@ const FormSchema = new mongoose.Schema({
     name: String,
     email: String,
     branch: String,
-    // You can uncomment and add other fields as needed
+
+    
+    household_people: Number,
+    household_ages: String, // We'll use a string or text to capture the ages and genders
+    main_occupation: String,
+    other_occupation: String,
+    income: Number, // Monthly household income
+
+    // Daily Life and Challenges
+    daily_challenges: String, // Main challenges in daily life
+    expense_management: String, // How they manage household expenses
+    monthly_costs: String, // Major monthly costs
+    access_services: String, // Access to essential services
+
+    // Income and Livelihood
+    primary_income: String, // Primary source of income
+    additional_income: String, // Additional income sources
+    income_change: String, // How income has changed over the past year
+
+    // Additional fields can be uncommented or added here as needed
     // school: String,
     // industry: String,
     // mobile: String,

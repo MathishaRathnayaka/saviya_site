@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/slick-theme.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/bootsnav.css">	
+    <link rel="stylesheet" href="assets/css/bootsnav.css">    
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <style>
@@ -35,7 +35,7 @@
     <video autoplay muted loop id="bgVideo">
         <source src="./assets/images/fourm/v1.mp4" type="video/mp4">
     </video>
-    
+
     <section class="top-area">
         <div class="header-area">
             <nav class="navbar navbar-default bootsnav navbar-sticky navbar-scrollspy" data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
@@ -68,6 +68,7 @@
 
     <div class="container">
         <form action="/submit" method="POST" id="submissionForm">
+            <!-- Existing form fields -->
             <label for="regd_no">NIC Number :</label>
             <input type="text" id="regd_no" name="regd_no" required>
 
@@ -85,6 +86,53 @@
                 <option value="Abepussa">Abepussa</option>
                 <option value="Warakapola">Warakapola</option>
             </select>
+
+            <!-- New Demographics and Household Information section -->
+            <!-- <h3>Demographics and Household Information</h3> -->
+
+            <label for="household_people">How many people live in your household?</label>
+            <input type="number" id="household_people" name="household_people" required>
+
+            <label for="household_ages">What are the ages and genders of the people living in your household?</label>
+            <textarea id="household_ages" name="household_ages" rows="3" required></textarea>
+
+            <label for="main_occupation">What is your main occupation?</label>
+            <input type="text" id="main_occupation" name="main_occupation" required>
+
+            <label for="other_occupation">What is the occupation of other working members in your household?</label>
+            <input type="text" id="other_occupation" name="other_occupation">
+
+            <label for="income">What is your monthly household income?</label>
+            <input type="number" id="income" name="income" required>
+
+            <!-- Daily Life and Challenges -->
+            <!-- <h3>Daily Life and Challenges</h3> -->
+            
+            <label for="daily_challenges">What are the main challenges you face in your daily life?</label>
+            <textarea id="daily_challenges" name="daily_challenges" rows="3" required></textarea>
+
+            <label for="expense_management">How do you manage your household expenses?</label>
+            <textarea id="expense_management" name="expense_management" rows="3" required></textarea>
+
+            <label for="monthly_costs">What are the major costs you incur every month?</label>
+            <textarea id="monthly_costs" name="monthly_costs" rows="3" required></textarea>
+
+            <label for="access_services">How do you access essential services like healthcare, education, and transportation?</label>
+            <textarea id="access_services" name="access_services" rows="3" required></textarea>
+
+            <!-- Income and Livelihood -->
+            <!-- <h3>Income and Livelihood</h3> -->
+
+            <label for="primary_income">What is your primary source of income?</label>
+            <input type="text" id="primary_income" name="primary_income" required>
+
+            <label for="additional_income">Do you have any additional income sources?</label>
+            <textarea id="additional_income" name="additional_income" rows="3"></textarea>
+
+            <label for="income_change">How has your income changed over the past year?</label>
+            <textarea id="income_change" name="income_change" rows="3"></textarea>
+
+            <!-- Additional Sections (Small Business and Aspirations) can be added similarly -->
 
             <button type="submit">Submit</button>
         </form>
