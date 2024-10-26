@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Submission</title>
     <link rel="stylesheet" href="form.css">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <link rel="shortcut icon" type="image/icon" href="assets/logo/logo2.jpg"/>
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
@@ -28,6 +25,13 @@
             text-align: center;
             margin-top: 20px;
             font-size: 18px;
+        }
+
+        /* Style for validation error message */
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
         }
     </style>
 </head>
@@ -71,6 +75,7 @@
             <!-- Existing form fields -->
             <label for="regd_no">NIC Number :</label>
             <input type="text" id="regd_no" name="regd_no" required>
+            <div class="error-message" id="nicError"></div>
 
             <label for="name">Name :</label>
             <input type="text" id="name" name="name" required>
@@ -87,9 +92,6 @@
                 <option value="Warakapola">Warakapola</option>
             </select>
 
-            <!-- New Demographics and Household Information section -->
-            <!-- <h3>Demographics and Household Information</h3> -->
-
             <label for="household_people">How many people live in your household?</label>
             <input type="number" id="household_people" name="household_people" required>
 
@@ -105,9 +107,6 @@
             <label for="income">What is your monthly household income?</label>
             <input type="number" id="income" name="income" required>
 
-            <!-- Daily Life and Challenges -->
-            <!-- <h3>Daily Life and Challenges</h3> -->
-            
             <label for="daily_challenges">What are the main challenges you face in your daily life?</label>
             <textarea id="daily_challenges" name="daily_challenges" rows="3" required></textarea>
 
@@ -120,9 +119,6 @@
             <label for="access_services">How do you access essential services like healthcare, education, and transportation?</label>
             <textarea id="access_services" name="access_services" rows="3" required></textarea>
 
-            <!-- Income and Livelihood -->
-            <!-- <h3>Income and Livelihood</h3> -->
-
             <label for="primary_income">What is your primary source of income?</label>
             <input type="text" id="primary_income" name="primary_income" required>
 
@@ -132,10 +128,27 @@
             <label for="income_change">How has your income changed over the past year?</label>
             <textarea id="income_change" name="income_change" rows="3"></textarea>
 
-            <!-- Additional Sections (Small Business and Aspirations) can be added similarly -->
-
             <button type="submit">Submit</button>
         </form>
     </div>
+
+    <script>
+        // NIC validation script
+        document.getElementById("submissionForm").addEventListener("submit", function(event) {
+            const nicInput = document.getElementById("regd_no");
+            const nicError = document.getElementById("nicError");
+            const nicValue = nicInput.value;
+
+            // Regular expression for NIC validation: 9 digits + letter OR 12 digits
+            const nicPattern = /^(?:\d{9}[VvXx]|\d{12})$/;
+
+            if (!nicPattern.test(nicValue)) {
+                nicError.textContent = "Please enter a valid NIC number (e.g., 123456789V or 123456789123).";
+                event.preventDefault(); // Prevent form submission if invalid
+            } else {
+                nicError.textContent = ""; // Clear error message if valid
+            }
+        });
+    </script>
 </body>
 </html>
