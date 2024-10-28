@@ -143,7 +143,7 @@
   </section>
   
     <!-- Add Product Button -->
-    <button onclick="document.getElementById('productModal').style.display='block'" class="alt-submit-btn">Add Loan Details</button>
+    <button onclick="document.getElementById('loanModal').style.display='block'" class="alt-submit-btn">Add Loan Details</button>
 
     <!-- Product Information Table -->
     <table border="1" cellspacing="0" cellpadding="10">
@@ -210,30 +210,30 @@
       </table>
 
     <!-- Modal for Add Loan -->
-    <div id="productModal" class="modal">
+    <div id="loanModal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="document.getElementById('productModal').style.display='none'">&times;</span>
-            <h2>Add a New Product</h2>
-            <form id="productForm">
+            <span class="close" onclick="document.getElementById('loanModal').style.display='none'">&times;</span>
+            <h2>Add Loan Details</h2>
+            <form id="loanForm">
                 <div class="alt-form-group">
-                    <label for="productName">Product Name</label>
-                    <input type="text" id="productName" required>
+                    <label for="loanType">Loan Type</label>
+                    <input type="text" id="loanType" required>
                 </div>
                 <div class="alt-form-group">
-                    <label for="sellerName">Seller Name</label>
-                    <input type="text" id="sellerName" required>
+                    <label for="interestRate">Interest Rate (%)</label>
+                    <input type="text" id="interestRate" required>
+                </div>
+                <div class="alt-form-group">
+                    <label for="loanAmount">Loan Amount (LKR)</label>
+                    <input type="text" id="loanAmount" required>
+                </div>
+                <div class="alt-form-group">
+                    <label for="providerName">Provider Name</label>
+                    <input type="text" id="providerName" required>
                 </div>
                 <div class="alt-form-group">
                     <label for="contact">Contact</label>
-                    <input type="tel" id="contact" required>
-                </div>
-                <div class="alt-form-group">
-                    <label for="location">Location</label>
-                    <input type="text" id="location" required>
-                </div>
-                <div class="alt-form-group">
-                    <label for="priceRange">Price Range (LKR)</label>
-                    <input type="text" id="priceRange" required>
+                    <input type="text" id="contact" required>
                 </div>
                 <div class="alt-form-group">
                     <label for="details">Details</label>
@@ -243,22 +243,22 @@
             </form>
         </div>
     </div>
-
+    
     <script>
-        // Handle form submission
-        document.getElementById('loanForm').onsubmit = function(event) {
-            event.preventDefault();
-            alert("Loan details submitted!"); // Placeholder for form submission logic
-            document.getElementById('productModal').style.display = 'none'; // Close modal after submission
-        };
+    // Handle form submission
+    document.getElementById('loanForm').onsubmit = function(event) {
+        event.preventDefault();
+        alert("Loan details submitted!"); // Placeholder for form submission logic
+        document.getElementById('loanModal').style.display = 'none'; // Close modal after submission
+    };
 
-        // Close the modal if the user clicks anywhere outside of it
-        window.onclick = function(event) {
-            if (event.target == document.getElementById('productModal')) {
-                document.getElementById('productModal').style.display = "none";
-            }
+    // Close the modal if the user clicks anywhere outside of it
+    window.onclick = function(event) {
+        if (event.target == document.getElementById('loanModal')) {
+            document.getElementById('loanModal').style.display = "none";
         }
-    </script>
+    }
+</script>
     <footer>
         <div class="navbar-header">
             <a class="navbar-brand" href="index.html">
