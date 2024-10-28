@@ -3,303 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alternate Loan Form</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+    <title>ණය තොරතුරු</title>
+    <link rel="stylesheet" href="ad.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-        }
-
-        /* Navbar Styles */
-        .navbar {
-            background-color: #2c3e50;
-            padding: 10px 20px;
-            position: relative;
-            z-index: 1000;
-        }
-
-        .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        /* Logo Styles */
-        .navbar-brand {
-            font-size: 30px;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        .navbar-brand .logo-part {
-            font-size: 35px;
-        }
-
-        /* Menu Styles */
-        .navbar-menu {
-            display: flex;
-        }
-
-        .nav-menu {
-            list-style-type: none;
-            display: flex;
-            gap: 20px;
-        }
-
-        .nav-menu li a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            text-transform: capitalize;
-            padding: 10px 15px;
-            transition: color 0.3s ease, background-color 0.3s ease;
-        }
-
-        .nav-menu li a:hover {
-            background-color: #e67e22;
-            border-radius: 5px;
-            color: white;
-        }
-
-        /* Hamburger Icon */
-        .navbar-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 24px;
-            color: white;
-            cursor: pointer;
-        }
-
-        .navbar-toggle:focus {
-            outline: none;
-        }
-
-        /* Mobile View */
-        @media (max-width: 768px) {
-            .navbar-menu {
-                display: none;
-                flex-direction: column;
-                background-color: #2c3e50;
-                width: 100%;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                padding: 10px 0;
-            }
-
-            .navbar-menu.active {
-                display: flex;
-            }
-
-            .nav-menu {
-                flex-direction: column;
-                align-items: center;
-                gap: 10px;
-            }
-
-            .navbar-toggle {
-                display: block;
-            }
-        }
-
-        /* Featured Work Section */
-        .featured-work {
-            text-align: center;
-            padding: 50px 20px;
-        }
-
-        .featured-work h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-
-        .featured-work p {
-            max-width: 700px;
-            margin: 0 auto 40px auto;
-            font-size: 1.1em;
-            color: #666;
-        }
-
-        .work-gallery {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-        }
-
-        .work-item {
-            max-width: 200px;
-            text-align: center;
-        }
-
-        .work-item img {
-            width: 100%;
-            border-radius: 8px;
-        }
-
-        /* Form Section */
-        .alt-loan-form {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 30px;
-            background-color: #f0f0f0;
-        }
-
-        .alt-loan-form form {
-            background-color: #ffffff;
-            padding: 50px;
-            border-radius: 15px;
-            border: 1px solid #ccc;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 600px;
-        }
-
-        .alt-loan-form h2 {
-            text-align: center;
-            font-size: 32px;
-            margin-bottom: 25px;
-            color: #444;
-        }
-
-        .alt-form-group {
-            margin-bottom: 20px;
-        }
-
-        .alt-form-group label {
-            font-size: 18px;
-            margin-bottom: 8px;
-            display: block;
-            color: #333;
-        }
-
-        .alt-form-group input,
-        .alt-form-group select,
-        .alt-form-group textarea {
-            width: 100%;
-            padding: 15px;
-            font-size: 18px;
-            border: 2px solid #eee;
-            border-radius: 10px;
-            background-color: #f9f9f9;
-            transition: border 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .alt-form-group input:focus,
-        .alt-form-group select:focus,
-        .alt-form-group textarea:focus {
-            border-color: #007bff;
-            box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
-            outline: none;
-        }
-
+        /* Button Styling */
         .alt-submit-btn {
-            width: 100%;
-            padding: 18px;
+            display: inline-block;
+            padding: 12px 25px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
             background-color: #007bff;
-            color: white;
             border: none;
-            border-radius: 10px;
-            font-size: 20px;
+            border-radius: 8px;
             cursor: pointer;
-            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: background-color 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px; /* Add margin for better spacing */
         }
 
         .alt-submit-btn:hover {
             background-color: #0056b3;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
 
-        .alt-form-group input:invalid {
-            border-color: red;
-        }
-
-        .alt-form-group input:valid {
-            border-color: green;
-        }
-
-        /* Table Styling */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 0 auto;
-            font-size: 1em;
-        }
-
-        table th, table td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-
-        table th {
-            background-color: #2c3e50;
-            color: white;
-        }
-
-        table tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-
-        table tr:hover {
-            background-color: #ddd;
-        }
-
-        /* Video Background */
-        #bgVideo {
+        /* Modal Styling */
+        .modal {
+            display: none;
             position: fixed;
-            right: 0;
-            bottom: 0;
-            min-width: 100%;
-            min-height: 100%;
-            z-index: -1;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
         }
 
-        /* Footer Section */
-        footer {
-            background-color: #010408;
-            color: #fff;
-            text-align: center;
+        .modal-content {
+            background-color: white;
+            margin: 10% auto;
             padding: 20px;
-            position: relative;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 500px;
         }
 
-        footer p {
-            margin: 0;
-            font-size: 1.2em;
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
         }
 
-        /* Training Programs Section */
-        .training-programs {
-            padding: 40px 20px;
-            text-align: center;
+        .close:hover {
+            color: black;
+            cursor: pointer;
         }
 
-        .training-programs h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
+        /* Ensure modal form fields are styled */
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
         }
     </style>
 </head>
 <body>
 
-    
-
+    <!-- Navigation Section -->
     <nav class="navbar">
         <div class="container">
-            <!-- Logo -->
             <div class="navbar-header">
                 <a class="navbar-brand" href="index.html">
                     <span class="logo-part" style="color: red;">ස</span>
@@ -307,8 +84,6 @@
                     <span class="logo-part" style="color: orange;">ය</span>
                 </a>
             </div>
-
-            <!-- Menu -->
             <div class="navbar-menu" id="navbar-menu">
                 <ul class="nav-menu">
                     <li><a href="/adminportal.html">Home</a></li>
@@ -334,14 +109,13 @@
         });
     </script>
 
-    <!-- Main Section uda thiyana Part changes -->
+    <!-- Main Section -->
     <section class="top-area">
-        <div class="header-area">
-        </div>
+        <div class="header-area"></div>
         <div class="clearfix"></div>
     </section>
 
-    <!-- Featured Work Section" kiyala thiyana clas eke changes methanin karanna puluwan -->
+    <!-- Featured Work Section -->
     <section class="featured-work">
         <h2><b>The Loan Information section</b></h2>
         <h2><b>ණය තොරතුරු අංශය</b></h2>
@@ -366,136 +140,125 @@
                     </a>
                 </div>
             </div>
-            
-            <!-- <a href="https://ikman.lk/en/ads/sri-lanka/jobs" class="Banking-btn" target="_blank">MORE JOBS</a> -->
-            <table border="1" cellspacing="0" cellpadding="10">
-                <thead>
-                  <tr>
-                    <th>Loan Type</th>
-                    <th>Interest Rate (%)</th>
-                    <th>Loan Amount (LKR)</th>
-                    <th>Provider Name</th>
-                    <th>Contact</th>
-                    <th>Details</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Agricultural Loan</td>
-                    <td>3.5</td>
-                    <td>50,000 - 500,000</td>
-                    <td>People's Bank</td>
-                    <td>+94 11 1234567</td>
-                    <td>Low-interest loans for farmers to boost production.</td>
-                  </tr>
-                  <tr>
-                    <td>Microfinance Loan</td>
-                    <td>5</td>
-                    <td>10,000 - 100,000</td>
-                    <td>Samurdhi Bank</td>
-                    <td>+94 11 2345678</td>
-                    <td>Small loans with flexible repayment for micro businesses.</td>
-                  </tr>
-                  <tr>
-                    <td>Housing Loan</td>
-                    <td>4.5</td>
-                    <td>500,000 - 2,000,000</td>
-                    <td>Bank of Ceylon</td>
-                    <td>+94 11 3456789</td>
-                    <td>Affordable housing loans for low-income families.</td>
-                  </tr>
-                  <tr>
-                    <td>Education Loan</td>
-                    <td>2</td>
-                    <td>100,000 - 1,000,000</td>
-                    <td>Hatton National Bank</td>
-                    <td>+94 11 4567890</td>
-                    <td>Education loans for students pursuing higher studies.</td>
-                  </tr>
-                  <tr>
-                    <td>Startup Business Loan</td>
-                    <td>6</td>
-                    <td>100,000 - 500,000</td>
-                    <td>Regional Development Bank</td>
-                    <td>+94 11 5678901</td>
-                    <td>Startup loans for small business ventures.</td>
-                  </tr>
-                  <tr>
-                    <td>Vehicle Loan</td>
-                    <td>5.5</td>
-                    <td>200,000 - 1,000,000</td>
-                    <td>Commercial Bank</td>
-                    <td>+94 11 6789012</td>
-                    <td>Low-interest vehicle loans for personal and business use.</td>
-                  </tr>
-                  <tr>
-                    <td>Fisheries Loan</td>
-                    <td>4</td>
-                    <td>50,000 - 300,000</td>
-                    <td>National Savings Bank</td>
-                    <td>+94 11 7890123</td>
-                    <td>Loans for fishermen to enhance fishing operations.</td>
-                  </tr>
-                  <tr>
-                    <td>Emergency Loan</td>
-                    <td>3</td>
-                    <td>10,000 - 50,000</td>
-                    <td>DFCC Bank</td>
-                    <td>+94 11 8901234</td>
-                    <td>Emergency loans to cover unforeseen expenses.</td>
-                  </tr>
-                  <tr>
-                    <td>Women Entrepreneurs Loan</td>
-                    <td>2.5</td>
-                    <td>50,000 - 500,000</td>
-                    <td>LOLC Finance</td>
-                    <td>+94 11 9012345</td>
-                    <td>Loans to empower women entrepreneurs.</td>
-                  </tr>
-                  <tr>
-                    <td>Solar Energy Loan</td>
-                    <td>3</td>
-                    <td>50,000 - 1,000,000</td>
-                    <td>SDB Bank</td>
-                    <td>+94 11 0123456</td>
-                    <td>Loans for solar energy solutions to promote sustainability.</td>
-                  </tr>
-                </tbody>
-              </table>
+  </section>
+  
+    <!-- Add Product Button -->
+    <button onclick="document.getElementById('productModal').style.display='block'" class="alt-submit-btn">Add Loan Details</button>
 
-    <div class="alt-loan-form">
-        <form id="loanForm">
-            <h2>Add the Loan Details...</h2>
-            <div class="alt-form-group">
-                <label for="name">Loan Type</label>
-                <input type="text" id="name" required>
-            </div>
-            <!-- <div class="alt-form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" required>
-            </div> -->
-            <div class="alt-form-group">
-                <label for="amount">Interst Rate</label>
-                <input type="number" id="amount" required>
-            </div>
-            <div class="alt-form-group">
-                <label for="term">Loan Term (Months)</label>
-                <select id="term" required>
-                    <option value="">Select term</option>
-                    <option value="12">12 Months</option>
-                    <option value="24">24 Months</option>
-                    <option value="36">36 Months</option>
-                    <option value="48">48 Months</option>
-                </select>
-            </div>
-            <div class="alt-form-group">
-                <label for="reason">Details</label>
-                <textarea id="reason" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="alt-submit-btn">Submit</button>
-        </form>
+    <!-- Product Information Table -->
+    <table border="1" cellspacing="0" cellpadding="10">
+        <thead>
+          <tr>
+            <th>Loan Type</th>
+            <th>Interest Rate (%)</th>
+            <th>Loan Amount (LKR)</th>
+            <th>Provider Name</th>
+            <th>Contact</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Agricultural Loan</td>
+            <td>3.5</td>
+            <td>50,000 - 500,000</td>
+            <td>People's Bank</td>
+            <td>+94 11 1234567</td>
+            <td>Low-interest loans for farmers to boost production.</td>
+          </tr>
+          <tr>
+            <td>Microfinance Loan</td>
+            <td>5</td>
+            <td>10,000 - 100,000</td>
+            <td>Samurdhi Bank</td>
+            <td>+94 11 2345678</td>
+            <td>Small loans with flexible repayment for micro businesses.</td>
+          </tr>
+          <tr>
+            <td>Housing Loan</td>
+            <td>4.5</td>
+            <td>500,000 - 2,000,000</td>
+            <td>Bank of Ceylon</td>
+            <td>+94 11 3456789</td>
+            <td>Affordable housing loans for low-income families.</td>
+          </tr>
+          <tr>
+            <td>Education Loan</td>
+            <td>2</td>
+            <td>100,000 - 1,000,000</td>
+            <td>Hatton National Bank</td>
+            <td>+94 11 4567890</td>
+            <td>Education loans for students pursuing higher studies.</td>
+          </tr>
+          <tr>
+            <td>Startup Business Loan</td>
+            <td>6</td>
+            <td>100,000 - 500,000</td>
+            <td>Regional Development Bank</td>
+            <td>+94 11 5678901</td>
+            <td>Startup loans for small business ventures.</td>
+          </tr>
+          <tr>
+            <td>Vehicle Loan</td>
+            <td>5.5</td>
+            <td>200,000 - 1,000,000</td>
+            <td>Commercial Bank</td>
+            <td>+94 11 6789012</td>
+            <td>Low-interest vehicle loans for personal and business use.</td>
+          </tr>
+        </tbody>
+      </table>
+
+    <!-- Modal for Add Loan -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('productModal').style.display='none'">&times;</span>
+            <h2>Add a New Product</h2>
+            <form id="productForm">
+                <div class="alt-form-group">
+                    <label for="productName">Product Name</label>
+                    <input type="text" id="productName" required>
+                </div>
+                <div class="alt-form-group">
+                    <label for="sellerName">Seller Name</label>
+                    <input type="text" id="sellerName" required>
+                </div>
+                <div class="alt-form-group">
+                    <label for="contact">Contact</label>
+                    <input type="tel" id="contact" required>
+                </div>
+                <div class="alt-form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" required>
+                </div>
+                <div class="alt-form-group">
+                    <label for="priceRange">Price Range (LKR)</label>
+                    <input type="text" id="priceRange" required>
+                </div>
+                <div class="alt-form-group">
+                    <label for="details">Details</label>
+                    <textarea id="details" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="alt-submit-btn">Submit</button>
+            </form>
+        </div>
     </div>
 
+    <script>
+        // Handle form submission
+        document.getElementById('loanForm').onsubmit = function(event) {
+            event.preventDefault();
+            alert("Loan details submitted!"); // Placeholder for form submission logic
+            document.getElementById('productModal').style.display = 'none'; // Close modal after submission
+        };
+
+        // Close the modal if the user clicks anywhere outside of it
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('productModal')) {
+                document.getElementById('productModal').style.display = "none";
+            }
+        }
+    </script>
     <footer>
         <div class="navbar-header">
             <a class="navbar-brand" href="index.html">
@@ -504,21 +267,6 @@
                 <span class="logo-part" style="color: orange;">ය</span>
             </a>
         </div>
-    </footer>  
-
-    <script>
-        document.getElementById('loanForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Show the loan details added message
-            alert("Loan details added"); 
-            
-            // Redirect to home page after a brief delay
-            setTimeout(function() {
-                window.location.href = "index.html"; // Update with your home page URL
-            }, 2000); // Redirect after 2 seconds
-        });
-    </script>
-    
+    </footer>
 </body>
 </html>

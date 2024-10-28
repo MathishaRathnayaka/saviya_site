@@ -3,39 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>අපනයන අවස්ථා </title>
+    <title>පුහුණු අවස්ථා </title>
     <link rel="stylesheet" href="ad.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Button Styling */
+        .alt-submit-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .alt-submit-btn:hover {
+            background-color: #0056b3;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Modal Styling */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 500px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover {
+            color: black;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 
     <!-- Navigation Section -->
     <nav class="navbar">
         <div class="container">
-            <!-- Logo -->
             <div class="navbar-header">
-                <a class="navbar-brand" href="./adminportal.html">
+                <a class="navbar-brand" href="index.html">
                     <span class="logo-part" style="color: red;">ස</span>
                     <span class="logo-part" style="color: rgb(3, 151, 114);">වි</span>
                     <span class="logo-part" style="color: orange;">ය</span>
                 </a>
             </div>
-
-            <!-- Menu -->
             <div class="navbar-menu" id="navbar-menu">
                 <ul class="nav-menu">
-                    <li><a href="/adminportal.html">Home</a></li>
-                    <li><a href="/adminportal.html">About Us</a></li>
-                    <li><a href="/adminportal.html">Explore</a></li>
-                    <li><a href="/adminportal.html">Review</a></li>
-                    <li><a href="/adminportal.html">Blog</a></li>
-                    <li><a href="/adminportal.html">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">About Us</a></li>
+                    <li><a href="index.html">Explore</a></li>
+                    <li><a href="index.html">Review</a></li>
+                    <li><a href="index.html">Blog</a></li>
+                    <li><a href="index.html">Contact</a></li>
                     <li><a href="form.html">Form</a></li>
                 </ul>
             </div>
-
-            <!-- Hamburger Menu (for mobile) -->
             <button class="navbar-toggle" type="button">
                 <i class="fas fa-bars"></i>
             </button>
@@ -48,43 +97,38 @@
         });
     </script>
 
-    <!-- Main Section -->
-    <section class="top-area">
-        <div class="header-area">
+<section class="featured-work">
+    <h2><b>A better future through skill development!</b></h2>
+    <h2><b>නිපුණතා සංවර්ධනය තුලින් යහපත් අනාගතයක් !</b></h2>
+    <p>Learn, grow, and succeed! The Training Opportunities section offers skill development programs for various industries,
+         enabling low-income individuals to gain knowledge and boost their employability..<br>
+        ඉගෙන ගන්න, වර්ධනය වන්න, සාර්ථක වන්න! පුහුණු අවස්ථා අංශය විවිධ කර්මාන්ත සඳහා නිපුණතා සංවර්ධන වැඩසටහන් ඉදිරිපත් කරයි,
+         අඩු ආදායම්ලාභී පුද්ගලයින්ට දැනුම ලබා ගැනීමට සහ ඔවුන්ගේ සේවා නියුක්තිය ඉහළ නැංවීමට හැකි වේ.</p>
+    <div class="work-gallery">
+        <div class="work-item">
+            <a href="https://www.slitad.org.lk/" target="_blank">
+                <img src="assets/images/adsec/training/t1.jpg" alt="Up-tempo">
+            </a>
+            
         </div>
-        <div class="clearfix"></div>
-    </section>
+        <div class="work-item">
+            <a href="https://www.nysc.lk/" target="_blank">
+                <img src="assets/images/adsec/training/t2.jpg" alt="Up-tempo">
+            </a>  
+            
+        </div>
 
-    <!-- Featured Work Section -->
-    <section class="featured-work">
-        <h2><b>A better future through skill development!</b></h2>
-        <h2><b>නිපුණතා සංවර්ධනය තුලින් යහපත් අනාගතයක් !</b></h2>
-        <p>Learn, grow, and succeed! The Training Opportunities section offers skill development programs for various industries,
-             enabling low-income individuals to gain knowledge and boost their employability..<br>
-            ඉගෙන ගන්න, වර්ධනය වන්න, සාර්ථක වන්න! පුහුණු අවස්ථා අංශය විවිධ කර්මාන්ත සඳහා නිපුණතා සංවර්ධන වැඩසටහන් ඉදිරිපත් කරයි,
-             අඩු ආදායම්ලාභී පුද්ගලයින්ට දැනුම ලබා ගැනීමට සහ ඔවුන්ගේ සේවා නියුක්තිය ඉහළ නැංවීමට හැකි වේ.</p>
-        <div class="work-gallery">
-            <div class="work-item">
-                <a href="https://www.slitad.org.lk/" target="_blank">
-                    <img src="assets/images/adsec/training/t1.jpg" alt="Up-tempo">
-                </a>
-                
-            </div>
-            <div class="work-item">
-                <a href="https://www.nysc.lk/" target="_blank">
-                    <img src="assets/images/adsec/training/t2.jpg" alt="Up-tempo">
-                </a>  
-                
-            </div>
+        <div class="work-item">
+            <a href="https://www.nysc.lk/" target="_blank">
+                <img src="assets/images/adsec/training/t3.jpg" alt="Up-tempo">
+            </a>  
+            
+        </div>
+    <!-- <a href="https://ikman.lk/en/ads/sri-lanka/jobs" class="Bancking-btn" target="_blank">MORE JOBS</a> -->
+</section>
 
-            <div class="work-item">
-                <a href="https://www.nysc.lk/" target="_blank">
-                    <img src="assets/images/adsec/training/t3.jpg" alt="Up-tempo">
-                </a>  
-                
-            </div>
-        <!-- <a href="https://ikman.lk/en/ads/sri-lanka/jobs" class="Bancking-btn" target="_blank">MORE JOBS</a> -->
-    </section>
+    <!-- Add Training Button -->
+    <button onclick="document.getElementById('trainingModal').style.display='block'" class="alt-submit-btn">Add Training Program</button>
 
     <!-- Training Programs Table -->
     <section class="training-programs">
@@ -184,27 +228,41 @@
             </tbody>
         </table>
 
-        
+    <!-- Training Modal -->
+    <div id="trainingModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('trainingModal').style.display='none'">&times;</span>
+            <h2>Add a New Training Program</h2>
+            <form id="trainingForm">
+                <div class="alt-form-group">
+                    <label for="programName">Training Program</label>
+                    <input type="text" id="programName" required>
+                </div>
+                <div class="alt-form-group">
+                    <label for="instituteName">Institute Name</label>
+                    <input type="text" id="instituteName" required>
+                </div>
+                <div class="alt-form-group">
+                    <label for="contact">Contact</label>
+                    <input type="tel" id="contact" required>
+                </div>
+                <div class="alt-form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" required>
+                </div>
+                <div class="alt-form-group">
+                    <label for="cost">Cost (LKR)</label>
+                    <input type="number" id="cost" required>
+                </div>
+                <div class="alt-form-group">
+                    <label for="details">Program Details</label>
+                    <textarea id="details" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="alt-submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
 
-
-    <script>
-        document.getElementById('loanForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Show the loan details added message
-            alert("Loan details added"); 
-            
-            // Redirect to home page after a brief delay
-            setTimeout(function() {
-                window.location.href = "index.html"; // Update with your home page URL
-            }, 2000); // Redirect after 2 seconds
-        });
-    </script>
-
-
-
-
-    </section>
     <footer>
         <div class="navbar-header">
             <a class="navbar-brand" href="index.html">
@@ -214,6 +272,47 @@
             </a>
         </div>
     </footer>
+
+    <script>
+        // Form submission handling
+        document.getElementById('trainingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Collect form data
+            const programName = document.getElementById('programName').value;
+            const instituteName = document.getElementById('instituteName').value;
+            const contact = document.getElementById('contact').value;
+            const location = document.getElementById('location').value;
+            const cost = document.getElementById('cost').value;
+            const details = document.getElementById('details').value;
+            
+            // Add new row to the table
+            const table = document.querySelector('table tbody');
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${programName}</td>
+                <td>${instituteName}</td>
+                <td>${contact}</td>
+                <td>${location}</td>
+                <td>${cost}</td>
+                <td>${details}</td>
+            `;
+            table.appendChild(row);
+
+            // Close modal and reset form
+            document.getElementById('trainingModal').style.display = 'none';
+            document.getElementById('trainingForm').reset();
+            alert("Training program successfully added!");
+        });
+
+        // Close modal if clicked outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('trainingModal');
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 </html>

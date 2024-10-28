@@ -3,17 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>රැකියා අවස්ථා </title>
+    <title>රැකියා අවස්ථා</title>
     <link rel="stylesheet" href="ad.css">
+    <link rel="stylesheet" href="Unlock Opportunities and Improve your Lives....css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Button Styling */
+        .alt-submit-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .alt-submit-btn:hover {
+            background-color: #0056b3;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Additional styles for modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 500px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 
     <!-- Navigation Section -->
     <nav class="navbar">
         <div class="container">
-            <!-- Logo -->
             <div class="navbar-header">
                 <a class="navbar-brand" href="index.html">
                     <span class="logo-part" style="color: red;">ස</span>
@@ -21,21 +77,17 @@
                     <span class="logo-part" style="color: orange;">ය</span>
                 </a>
             </div>
-
-            <!-- Menu -->
             <div class="navbar-menu" id="navbar-menu">
-              <ul class="nav-menu">
-                  <li><a href="/adminportal.html">Home</a></li>
-                  <li><a href="/adminportal.html">About Us</a></li>
-                  <li><a href="/adminportal.html">Explore</a></li>
-                  <li><a href="/adminportal.html">Review</a></li>
-                  <li><a href="/adminportal.html">Blog</a></li>
-                  <li><a href="/adminportal.html">Contact</a></li>
-                  <li><a href="form.html">Form</a></li>
-              </ul>
-          </div>
-
-            <!-- Hamburger Menu (for mobile) -->
+                <ul class="nav-menu">
+                    <li><a href="/adminportal.html">Home</a></li>
+                    <li><a href="/adminportal.html">About Us</a></li>
+                    <li><a href="/adminportal.html">Explore</a></li>
+                    <li><a href="/adminportal.html">Review</a></li>
+                    <li><a href="/adminportal.html">Blog</a></li>
+                    <li><a href="/adminportal.html">Contact</a></li>
+                    <li><a href="form.html">Form</a></li>
+                </ul>
+            </div>
             <button class="navbar-toggle" type="button">
                 <i class="fas fa-bars"></i>
             </button>
@@ -50,129 +102,163 @@
 
     <!-- Main Section -->
     <section class="top-area">
-        <div class="header-area">
-        </div>
+        <div class="header-area"></div>
         <div class="clearfix"></div>
     </section>
 
     <!-- Featured Work Section -->
     <section class="featured-work">
-        <h2><b>Job opportunities for you...</b></h2>
-        <h2><b>ඔබ සඳහා ඇති රැකියා අවස්ථා…</b></h2>
-        <p>Providing career paths for low-income families! Our Job Opportunities section connects job seekers with businesses,
-            offering employment options to build a stable future and improve their living standards.<br>
-            අඩු ආදායම්ලාභී පවුල් සඳහා වෘත්තීය මාර්ග සැපයීම! අපගේ රැකියා අවස්ථා අංශය රැකියා සොයන්නන්
-            ව්‍යාපාර සමඟ සම්බන්ධ කරයි, ස්ථාවර අනාගතයක් ගොඩනැගීමට සහ ඔවුන්ගේ ජීවන තත්ත්වය වැඩිදියුණු කිරීමට රැකියා විකල්ප ලබා දෙයි.</p>
-        <div class="work-gallery">
-            <div class="work-item">
-                <img src="assets/images/adsec/job/j1.jpg" alt="Up-tempo">
-            </div>
-            <div class="work-item">
-                <img src="assets/images/adsec/job/j2.jpg" alt="Sonata I">
-            </div>
-            <div class="work-item">
-                <img src="assets/images/adsec/job/j3.jpg" alt="Sonata II">
-            </div>
-        </div>
-        <!-- <a href="https://ikman.lk/en/ads/sri-lanka/jobs" class="Bancking-btn" target="_blank">MORE JOBS</a> -->
+      <h2><b>Job opportunities for you...</b></h2>
+      <h2><b>ඔබ සඳහා ඇති රැකියා අවස්ථා…</b></h2>
+      <p>Providing career paths for low-income families! Our Job Opportunities section connects job seekers with businesses,
+          offering employment options to build a stable future and improve their living standards.<br>
+          අඩු ආදායම්ලාභී පවුල් සඳහා වෘත්තීය මාර්ග සැපයීම! අපගේ රැකියා අවස්ථා අංශය රැකියා සොයන්නන්
+          ව්‍යාපාර සමඟ සම්බන්ධ කරයි, ස්ථාවර අනාගතයක් ගොඩනැගීමට සහ ඔවුන්ගේ ජීවන තත්ත්වය වැඩිදියුණු කිරීමට රැකියා විකල්ප ලබා දෙයි.</p>
+      <div class="work-gallery">
+          <div class="work-item">
+              <img src="assets/images/adsec/job/j1.jpg" alt="Up-tempo">
+          </div>
+          <div class="work-item">
+              <img src="assets/images/adsec/job/j2.jpg" alt="Sonata I">
+          </div>
+          <div class="work-item">
+              <img src="assets/images/adsec/job/j3.jpg" alt="Sonata II">
+          </div>
     </section>
-    <table border="1" cellspacing="0" cellpadding="10">
-        <thead>
-          <tr>
-            <th>Job Title</th>
-            <th>Industry</th>
-            <th>Company Name</th>
-            <th>Contact</th>
-            <th>Location</th>
-            <th>Job Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Farm Worker</td>
-            <td>Agriculture</td>
-            <td>Green Harvest Ltd</td>
-            <td>+94 11 1234567</td>
-            <td>Anuradhapura</td>
-            <td>Assist with farm activities including planting and harvesting.</td>
-          </tr>
-          <tr>
-            <td>Tailor</td>
-            <td>Textile</td>
-            <td>Sewing Dreams</td>
-            <td>+94 11 2345678</td>
-            <td>Jaffna</td>
-            <td>Tailoring and altering clothes to meet customer needs.</td>
-          </tr>
-          <tr>
-            <td>Retail Assistant</td>
-            <td>Retail</td>
-            <td>SuperMart</td>
-            <td>+94 11 3456789</td>
-            <td>Colombo</td>
-            <td>Assist customers and manage stock in retail outlets.</td>
-          </tr>
-          <tr>
-            <td>Mechanic Helper</td>
-            <td>Automotive</td>
-            <td>AutoCare Workshop</td>
-            <td>+94 11 4567890</td>
-            <td>Gampaha</td>
-            <td>Help with vehicle repairs and maintenance.</td>
-          </tr>
-          <tr>
-            <td>Construction Laborer</td>
-            <td>Construction</td>
-            <td>BuildWell Constructions</td>
-            <td>+94 11 5678901</td>
-            <td>Kandy</td>
-            <td>Perform labor tasks on construction sites.</td>
-          </tr>
-          <tr>
-            <td>Fisherman</td>
-            <td>Fisheries</td>
-            <td>Ocean Harvesters</td>
-            <td>+94 11 6789012</td>
-            <td>Trincomalee</td>
-            <td>Engage in fishing activities and assist with boat maintenance.</td>
-          </tr>
-          <tr>
-            <td>Baker's Assistant</td>
-            <td>Food & Beverage</td>
-            <td>Golden Loaf Bakery</td>
-            <td>+94 11 7890123</td>
-            <td>Galle</td>
-            <td>Assist in baking and packaging baked goods.</td>
-          </tr>
-          <tr>
-            <td>Tour Guide</td>
-            <td>Tourism</td>
-            <td>Island Adventures</td>
-            <td>+94 11 8901234</td>
-            <td>Matara</td>
-            <td>Guide tourists and explain local attractions.</td>
-          </tr>
-          <tr>
-            <td>IT Support Technician</td>
-            <td>Information Technology</td>
-            <td>TechFix Solutions</td>
-            <td>+94 11 9012345</td>
-            <td>Kurunegala</td>
-            <td>Provide technical support for IT systems.</td>
-          </tr>
-          <tr>
-            <td>Cleaner</td>
-            <td>Services</td>
-            <td>Clean & Clear Services</td>
-            <td>+94 11 0123456</td>
-            <td>Negombo</td>
-            <td>Perform cleaning tasks in offices and public spaces.</td>
-          </tr>
-        </tbody>
-      </table>
-      
 
-      
+    <!-- Add Job Button -->
+    <button onclick="document.getElementById('jobModal').style.display='block'" class="alt-submit-btn">Add Job</button>
+
+    <!-- Job Listings Table -->
+    <table border="1" cellspacing="0" cellpadding="10">
+      <thead>
+        <tr>
+          <th>Job Title</th>
+          <th>Industry</th>
+          <th>Company Name</th>
+          <th>Contact</th>
+          <th>Location</th>
+          <th>Job Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Farm Worker</td>
+          <td>Agriculture</td>
+          <td>Green Harvest Ltd</td>
+          <td>+94 11 1234567</td>
+          <td>Anuradhapura</td>
+          <td>Assist with farm activities including planting and harvesting.</td>
+        </tr>
+        <tr>
+          <td>Tailor</td>
+          <td>Textile</td>
+          <td>Sewing Dreams</td>
+          <td>+94 11 2345678</td>
+          <td>Jaffna</td>
+          <td>Tailoring and altering clothes to meet customer needs.</td>
+        </tr>
+        <tr>
+          <td>Retail Assistant</td>
+          <td>Retail</td>
+          <td>SuperMart</td>
+          <td>+94 11 3456789</td>
+          <td>Colombo</td>
+          <td>Assist customers and manage stock in retail outlets.</td>
+        </tr>
+        <tr>
+          <td>Mechanic Helper</td>
+          <td>Automotive</td>
+          <td>AutoCare Workshop</td>
+          <td>+94 11 4567890</td>
+          <td>Gampaha</td>
+          <td>Help with vehicle repairs and maintenance.</td>
+        </tr>
+        <tr>
+          <td>Construction Laborer</td>
+          <td>Construction</td>
+          <td>BuildWell Constructions</td>
+          <td>+94 11 5678901</td>
+          <td>Kandy</td>
+          <td>Perform labor tasks on construction sites.</td>
+        </tr>
+        <tr>
+          <td>Fisherman</td>
+          <td>Fisheries</td>
+          <td>Ocean Harvesters</td>
+          <td>+94 11 6789012</td>
+          <td>Trincomalee</td>
+          <td>Engage in fishing activities and assist with boat maintenance.</td>
+        </tr>
+        <tr>
+          <td>Baker's Assistant</td>
+          <td>Food & Beverage</td>
+          <td>Golden Loaf Bakery</td>
+          <td>+94 11 7890123</td>
+          <td>Galle</td>
+          <td>Assist in baking and packaging baked goods.</td>
+        </tr>
+        <tr>
+          <td>Tour Guide</td>
+          <td>Tourism</td>
+          <td>Island Adventures</td>
+          <td>+94 11 8901234</td>
+          <td>Matara</td>
+          <td>Guide tourists and explain local attractions.</td>
+        </tr>
+        <tr>
+          <td>IT Support Technician</td>
+          <td>Information Technology</td>
+          <td>TechFix Solutions</td>
+          <td>+94 11 9012345</td>
+          <td>Kurunegala</td>
+          <td>Provide technical support for IT systems.</td>
+        </tr>
+        <tr>
+          <td>Cleaner</td>
+          <td>Services</td>
+          <td>Clean & Clear Services</td>
+          <td>+94 11 0123456</td>
+          <td>Negombo</td>
+          <td>Perform cleaning tasks in offices and public spaces.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Job Modal -->
+    <div id="jobModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('jobModal').style.display='none'">&times;</span>
+            <h2>Add a New Job Opportunity</h2>
+            <form id="jobForm">
+                <div class="alt-form-group">
+                    <label for="jobTitle">Job Title</label>
+                    <input type="text" id="jobTitle" required>
+                </div>
+                <div class="alt-form-group">
+                    <label for="industry">Industry</label>
+                    <input type="text" id="industry" required>
+                </div>
+                <div class="alt-form-group">
+                    <label for="company">Company Name</label>
+                    <input type="text" id="company" required>
+                </div>
+                <div class="alt-form-group">
+                    <label for="contact">Contact</label>
+                    <input type="tel" id="contact" required>
+                </div>
+                <div class="alt-form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" required>
+                </div>
+                <div class="alt-form-group">
+                    <label for="description">Job Description</label>
+                    <textarea id="description" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="alt-submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -184,6 +270,47 @@
             </a>
         </div>
     </footer>
+
+    <script>
+        // Form submission
+        document.getElementById('jobForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Collect form data
+            const jobTitle = document.getElementById('jobTitle').value;
+            const industry = document.getElementById('industry').value;
+            const company = document.getElementById('company').value;
+            const contact = document.getElementById('contact').value;
+            const location = document.getElementById('location').value;
+            const description = document.getElementById('description').value;
+            
+            // Add the job to the table
+            const table = document.querySelector('table tbody');
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${jobTitle}</td>
+                <td>${industry}</td>
+                <td>${company}</td>
+                <td>${contact}</td>
+                <td>${location}</td>
+                <td>${description}</td>
+            `;
+            table.appendChild(row);
+
+            // Close modal and reset form
+            document.getElementById('jobModal').style.display = 'none';
+            document.getElementById('jobForm').reset();
+            alert("Job successfully added!");
+        });
+
+        // Close the modal if clicked outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('jobModal');
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 </html>

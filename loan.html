@@ -3,15 +3,300 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ණය තොරතුරු</title>
-    <link rel="stylesheet" href="ad.css">
-    <link rel="stylesheet" href="Unlock Opportunities and Improve your Lives....css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Alternate Loan Form</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #2c3e50;
+            padding: 10px 20px;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Logo Styles */
+        .navbar-brand {
+            font-size: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .navbar-brand .logo-part {
+            font-size: 35px;
+        }
+
+        /* Menu Styles */
+        .navbar-menu {
+            display: flex;
+        }
+
+        .nav-menu {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-menu li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            text-transform: capitalize;
+            padding: 10px 15px;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+
+        .nav-menu li a:hover {
+            background-color: #e67e22;
+            border-radius: 5px;
+            color: white;
+        }
+
+        /* Hamburger Icon */
+        .navbar-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .navbar-toggle:focus {
+            outline: none;
+        }
+
+        /* Mobile View */
+        @media (max-width: 768px) {
+            .navbar-menu {
+                display: none;
+                flex-direction: column;
+                background-color: #2c3e50;
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                padding: 10px 0;
+            }
+
+            .navbar-menu.active {
+                display: flex;
+            }
+
+            .nav-menu {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .navbar-toggle {
+                display: block;
+            }
+        }
+
+        /* Featured Work Section */
+        .featured-work {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .featured-work h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .featured-work p {
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            font-size: 1.1em;
+            color: #666;
+        }
+
+        .work-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .work-item {
+            max-width: 200px;
+            text-align: center;
+        }
+
+        .work-item img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        /* Form Section */
+        .alt-loan-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 30px;
+            background-color: #f0f0f0;
+        }
+
+        .alt-loan-form form {
+            background-color: #ffffff;
+            padding: 50px;
+            border-radius: 15px;
+            border: 1px solid #ccc;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .alt-loan-form h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 25px;
+            color: #444;
+        }
+
+        .alt-form-group {
+            margin-bottom: 20px;
+        }
+
+        .alt-form-group label {
+            font-size: 18px;
+            margin-bottom: 8px;
+            display: block;
+            color: #333;
+        }
+
+        .alt-form-group input,
+        .alt-form-group select,
+        .alt-form-group textarea {
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            border: 2px solid #eee;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            transition: border 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .alt-form-group input:focus,
+        .alt-form-group select:focus,
+        .alt-form-group textarea:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+            outline: none;
+        }
+
+        .alt-submit-btn {
+            width: 100%;
+            padding: 18px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .alt-submit-btn:hover {
+            background-color: #0056b3;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .alt-form-group input:invalid {
+            border-color: red;
+        }
+
+        .alt-form-group input:valid {
+            border-color: green;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 auto;
+            font-size: 1em;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        table tr:hover {
+            background-color: #ddd;
+        }
+
+        /* Video Background */
+        #bgVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #010408;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        /* Training Programs Section */
+        .training-programs {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .training-programs h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Navigation Section -->
+    
+
     <nav class="navbar">
         <div class="container">
             <!-- Logo -->
@@ -26,12 +311,12 @@
             <!-- Menu -->
             <div class="navbar-menu" id="navbar-menu">
                 <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html">About Us</a></li>
-                    <li><a href="index.html">Explore</a></li>
-                    <li><a href="index.html">Review</a></li>
-                    <li><a href="index.html">Blog</a></li>
-                    <li><a href="index.html">Contact</a></li>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./index.html">About Us</a></li>
+                    <li><a href="./index.html">Explore</a></li>
+                    <li><a href="./index.html">Review</a></li>
+                    <li><a href="./index.html">Blog</a></li>
+                    <li><a href="./index.html">Contact</a></li>
                     <li><a href="form.html">Form</a></li>
                 </ul>
             </div>
@@ -178,9 +463,51 @@
                 </tbody>
               </table>
               
-            
+              
 
-    <!-- Footer -->
+              <script>
+                // Form submission handling
+                document.getElementById('loanForm').addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Collect form data
+                    const loanType = document.getElementById('loanType').value;
+                    const interestRate = document.getElementById('interestRate').value;
+                    const loanAmount = document.getElementById('loanAmount').value;
+                    const providerName = document.getElementById('providerName').value;
+                    const contact = document.getElementById('contact').value;
+                    const details = document.getElementById('details').value;
+                    
+                    // Add new row to the table
+                    const table = document.querySelector('table tbody');
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${loanType}</td>
+                        <td>${interestRate}</td>
+                        <td>${loanAmount}</td>
+                        <td>${providerName}</td>
+                        <td>${contact}</td>
+                        <td>${details}</td>
+                    `;
+                    table.appendChild(row);
+        
+                    // Close modal and reset form
+                    document.getElementById('loanModal').style.display = 'none';
+                    document.getElementById('loanForm').reset();
+                    alert("Loan successfully added!");
+                });
+        
+                // Close the modal if clicked outside
+                window.onclick = function(event) {
+                    const modal = document.getElementById('loanModal');
+                    if (event.target === modal) {
+                        modal.style.display = "none";
+                    }
+                }
+            </script>
+
+    
+
     <footer>
         <div class="navbar-header">
             <a class="navbar-brand" href="index.html">
@@ -189,7 +516,8 @@
                 <span class="logo-part" style="color: orange;">ය</span>
             </a>
         </div>
-    </footer>
+    </footer>  
 
+    
 </body>
 </html>
